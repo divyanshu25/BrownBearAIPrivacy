@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BrownBearAI legal pages, including Privacy Policy and Terms of Service.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="assets/brownbearai-logo.png">
+    <title>BrownBearAI Legal</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #ffffff;
+            --surface: #ffffff;
+            --surface-soft: #f5f5f7;
+            --text: #1d1d1f;
+            --text-muted: #6e6e73;
+            --line: rgba(29, 29, 31, 0.12);
+            --accent: #0a84ff;
+            --accent-soft: rgba(10, 132, 255, 0.08);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #000000;
+                --surface: #000000;
+                --surface-soft: #111214;
+                --text: #f5f5f7;
+                --text-muted: #a1a1a6;
+                --line: rgba(255, 255, 255, 0.14);
+                --accent: #2997ff;
+                --accent-soft: rgba(41, 151, 255, 0.16);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+            line-height: 1.72;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 0.08em;
+            text-underline-offset: 0.18em;
+        }
+
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 28px 20px 56px;
+        }
+
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: block;
+            flex-shrink: 0;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .brand-name {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--text);
+        }
+
+        .brand-subtitle {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+        }
+
+        .nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 36px;
+            padding: 0 12px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--surface);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav a:hover {
+            color: var(--text);
+            background: var(--accent-soft);
+        }
+
+        .nav a[aria-current="page"] {
+            color: var(--text);
+            background: var(--accent-soft);
+        }
+
+        .hero {
+            padding: 34px 0 28px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.35rem, 6vw, 3.55rem);
+            line-height: 1.06;
+            letter-spacing: -0.035em;
+            font-weight: 700;
+        }
+
+        .lede {
+            margin-top: 18px;
+            font-size: 1.08rem;
+            color: var(--text-muted);
+        }
+
+        .notice {
+            margin-top: 22px;
+            padding: 16px 18px;
+            border-radius: 16px;
+            background: var(--accent-soft);
+            border: 1px solid var(--line);
+            color: var(--text-muted);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            padding-top: 10px;
+        }
+
+        .card {
+            display: block;
+            padding: 22px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: var(--surface-soft);
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+        }
+
+        .card-label {
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .card-title {
+            margin-top: 10px;
+            font-size: 1.35rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .card-copy {
+            margin-top: 10px;
+            font-size: 0.98rem;
+            color: var(--text-muted);
+        }
+
+        .footer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            padding-top: 28px;
+            margin-top: 28px;
+            border-top: 1px solid var(--line);
+        }
+
+        .footer-meta {
+            color: var(--text-muted);
+            font-size: 0.94rem;
+        }
+
+        .footer-meta p + p {
+            margin-top: 6px;
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                padding: 20px 16px 40px;
+            }
+
+            .site-header,
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav {
+                gap: 14px;
+            }
+
+            .hero {
+                padding: 28px 0 22px;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .lede {
+                font-size: 1rem;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header class="site-header">
+            <div class="brand" aria-label="BrownBearAI Legal">
+                <img class="brand-logo" src="assets/brownbearai-logo.png" alt="BrownBearAI logo">
+                <span class="brand-text">
+                    <span class="brand-name">BrownBearAI</span>
+                    <span class="brand-subtitle">Legal</span>
+                </span>
+            </div>
+            <nav class="nav" aria-label="Legal">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-service.html">Terms</a>
+            </nav>
+        </header>
+
+        <section class="hero" aria-labelledby="legal-title">
+            <h1 id="legal-title">Legal</h1>
+            <p class="lede">
+                BrownBearAI's support and legal pages live here. Use the links below to see how information is
+                handled in the app and the terms that apply when you use BrownBearAI.
+            </p>
+            <div class="notice">
+                BrownBearAI is a free app. It analyzes your photos on your device and has no
+                developer-hosted backend. These pages are provided for App Store distribution,
+                TestFlight and public reference.
+            </div>
+        </section>
+
+        <section class="cards" aria-label="Legal pages">
+            <a class="card" href="privacy-policy.html">
+                <div class="card-label">Privacy</div>
+                <div class="card-title">Privacy Policy</div>
+                <div class="card-copy">
+                    What BrownBearAI keeps on your device, the few cases where information goes to a
+                    service you choose, like Dropbox, and the controls you have.
+                </div>
+            </a>
+            <a class="card" href="terms-of-service.html">
+                <div class="card-label">Terms</div>
+                <div class="card-title">Terms of Service</div>
+                <div class="card-copy">
+                    The app license, your photos and your decisions, third-party service terms, and
+                    the limitations that apply to using BrownBearAI.
+                </div>
+            </a>
+            <a class="card" href="mailto:divyanshugoyal.g25@gmail.com?subject=BrownBearAI%20support">
+                <div class="card-label">Support</div>
+                <div class="card-title">Get Help</div>
+                <div class="card-copy">
+                    Questions, problems or ideas? Email divyanshugoyal.g25@gmail.com. Please include
+                    your iPhone model and iOS version if something isn't working.
+                </div>
+            </a>
+        </section>
+
+        <footer class="footer">
+            <div class="brand" aria-label="BrownBearAI Legal footer">
+                <img class="brand-logo" src="assets/brownbearai-logo.png" alt="BrownBearAI logo">
+                <span class="brand-text">
+                    <span class="brand-name">BrownBearAI</span>
+                    <span class="brand-subtitle">Photo manager for iPhone and iPad</span>
+                </span>
+            </div>
+            <div class="footer-meta">
+                <p>BrownBearAI Legal</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

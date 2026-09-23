@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for BrownBearAI, an iPhone and iPad photo manager.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="assets/brownbearai-logo.png">
+    <title>BrownBearAI Terms of Service</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #ffffff;
+            --surface: #ffffff;
+            --text: #1d1d1f;
+            --text-muted: #6e6e73;
+            --line: rgba(29, 29, 31, 0.12);
+            --accent: #0a84ff;
+            --accent-soft: rgba(10, 132, 255, 0.08);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #000000;
+                --surface: #000000;
+                --text: #f5f5f7;
+                --text-muted: #a1a1a6;
+                --line: rgba(255, 255, 255, 0.14);
+                --accent: #2997ff;
+                --accent-soft: rgba(41, 151, 255, 0.16);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+            line-height: 1.72;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 0.08em;
+            text-underline-offset: 0.18em;
+        }
+
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 28px 20px 56px;
+        }
+
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: block;
+            flex-shrink: 0;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .brand-name {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--text);
+        }
+
+        .brand-subtitle {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+        }
+
+        .nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 36px;
+            padding: 0 12px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--surface);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav a:hover {
+            color: var(--text);
+            background: var(--accent-soft);
+        }
+
+        .nav a[aria-current="page"] {
+            color: var(--text);
+            background: var(--accent-soft);
+        }
+
+        .hero {
+            padding: 34px 0 24px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.35rem, 6vw, 3.55rem);
+            line-height: 1.06;
+            letter-spacing: -0.035em;
+            font-weight: 700;
+        }
+
+        .updated {
+            margin-top: 14px;
+            font-size: 0.97rem;
+            color: var(--text-muted);
+        }
+
+        .lede {
+            margin-top: 18px;
+            font-size: 1.08rem;
+            color: var(--text-muted);
+        }
+
+        .notice {
+            margin-top: 22px;
+            padding: 16px 18px;
+            border-radius: 16px;
+            background: var(--accent-soft);
+            border: 1px solid var(--line);
+            color: var(--text-muted);
+        }
+
+        .content {
+            border-top: 1px solid var(--line);
+        }
+
+        .section {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .section h2 {
+            margin: 0 0 12px;
+            font-size: 1.38rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        p + p {
+            margin-top: 12px;
+        }
+
+        ul {
+            margin: 14px 0 0;
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        li + li {
+            margin-top: 10px;
+        }
+
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .footer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            padding-top: 24px;
+        }
+
+        .footer-meta {
+            color: var(--text-muted);
+            font-size: 0.94rem;
+        }
+
+        .footer-meta p + p {
+            margin-top: 6px;
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                padding: 20px 16px 40px;
+            }
+
+            .site-header,
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav {
+                gap: 14px;
+            }
+
+            .hero {
+                padding: 28px 0 20px;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .lede {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 24px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header class="site-header">
+            <div class="brand" aria-label="BrownBearAI Terms of Service">
+                <img class="brand-logo" src="assets/brownbearai-logo.png" alt="BrownBearAI logo">
+                <span class="brand-text">
+                    <span class="brand-name">BrownBearAI</span>
+                    <span class="brand-subtitle">Terms of Service</span>
+                </span>
+            </div>
+            <nav class="nav" aria-label="Legal">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-service.html" aria-current="page">Terms</a>
+            </nav>
+        </header>
+
+        <section class="hero" aria-labelledby="terms-title">
+            <h1 id="terms-title">Terms of Service</h1>
+            <p class="updated">Last Updated: September 23, 2026</p>
+            <p class="lede">
+                These Terms of Service govern your use of BrownBearAI, an app for iPhone and iPad that
+                helps you organize, clean up, search, edit and back up your photos. By downloading,
+                accessing or using BrownBearAI, you agree to these Terms. If you do not agree, do not
+                use the app.
+            </p>
+            <div class="notice">
+                BrownBearAI is provided free of charge by an individual developer. It works with your
+                photo library, so keep a backup of photos that matter to you. BrownBearAI does not operate
+                a developer-hosted cloud service.
+            </div>
+        </section>
+
+        <article class="content">
+            <section class="section" id="license">
+                <h2>1. License and Permitted Use</h2>
+                <p>Subject to these Terms, you are granted a limited, personal, non-exclusive, non-transferable, revocable license to use BrownBearAI for your own lawful, non-commercial use on devices you own or control.</p>
+                <p>You may not copy, sell, sublicense, redistribute, reverse engineer, modify, interfere with or misuse BrownBearAI except as permitted by applicable law or by the licenses of the open-source components listed in the app's Acknowledgements.</p>
+            </section>
+
+            <section class="section" id="eligibility">
+                <h2>2. Eligibility and Compliance</h2>
+                <p>You are responsible for using BrownBearAI in compliance with applicable laws and with the terms of any third-party service you connect to it.</p>
+                <p>You may use BrownBearAI only if you can legally form a binding agreement under applicable law.</p>
+                <p>You represent and warrant that you are not located in, under the control of, or a resident of any country or territory subject to U.S. embargo, and that you are not on any U.S. Government list of prohibited or restricted parties.</p>
+            </section>
+
+            <section class="section" id="your-photos">
+                <h2>3. Your Photos and Your Decisions</h2>
+                <p>You keep all rights to your photos. BrownBearAI does not claim any ownership of them.</p>
+                <p>BrownBearAI suggests photos you may want to delete, such as duplicates or blurry shots. Suggestions are only suggestions: you decide what to delete. Deletions go through Apple's own confirmation dialog, and deleted photos stay in Photos' Recently Deleted album for the period iOS keeps them.</p>
+                <p>If you back up photos to Dropbox and choose to remove them from your device, BrownBearAI checks that each uploaded copy matches the original before removing it. You remain responsible for keeping your Dropbox account and its contents.</p>
+                <p>You are responsible for having the rights to any photos you edit or share, and for how you use them.</p>
+            </section>
+
+            <section class="section" id="limitations">
+                <h2>4. Automatic Analysis and AI Limitations</h2>
+                <p>BrownBearAI analyzes photos automatically. Results may be incomplete or wrong.</p>
+                <ul>
+                    <li><strong>Clean Up</strong> may mark a photo as a duplicate, similar, blurry or otherwise low quality when it is not, or miss ones that are.</li>
+                    <li><strong>Search and People</strong> may mislabel photos, miss them, or group different people together.</li>
+                    <li><strong>The editing assistant</strong>, whether it runs on your device or with a cloud provider you choose, may misunderstand a request or produce an unexpected edit. Edits can be undone.</li>
+                </ul>
+                <p>Review suggestions before you act on them.</p>
+            </section>
+
+            <section class="section" id="third-party">
+                <h2>5. Third-Party Services</h2>
+                <p>Some features rely on third parties, including Apple (Photos, iCloud Photos and Apple Intelligence), Dropbox, Anthropic and OpenAI. Using them is optional.</p>
+                <ul>
+                    <li>You are responsible for complying with the terms, privacy policies and usage rules of any third-party service you choose to use.</li>
+                    <li>If you provide your own AI API key, you are responsible for that key, any usage charges, and the requests you send.</li>
+                    <li>Dropbox storage, limits and availability are governed by your Dropbox plan and Dropbox's terms.</li>
+                    <li>BrownBearAI is not responsible for third-party outages, policy changes, billing, retention practices or output quality.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="privacy">
+                <h2>6. Privacy</h2>
+                <p>Your use of BrownBearAI is also subject to the <a href="privacy-policy.html">Privacy Policy</a>, which explains what stays on your device and the limited situations where information is sent from your device to services you choose to use.</p>
+            </section>
+
+            <section class="section" id="availability">
+                <h2>7. Availability, Updates and Support</h2>
+                <p>BrownBearAI is offered free of charge and may be modified, limited, suspended or discontinued at any time, with or without notice. Features may change or stop working because of app updates, iOS changes or third-party service changes.</p>
+                <p>No guaranteed support, maintenance, uptime commitment or service level is provided unless expressly stated otherwise in writing.</p>
+            </section>
+
+            <section class="section" id="ownership">
+                <h2>8. Ownership</h2>
+                <p>BrownBearAI and its design, text, code and branding are protected by intellectual property laws. Third-party components are used under their own licenses, listed in the app's Acknowledgements. Except for the limited license above, no rights are granted to you.</p>
+            </section>
+
+            <section class="section" id="warranty">
+                <h2>9. Disclaimer of Warranties</h2>
+                <p>To the maximum extent permitted by applicable law, BrownBearAI is provided “as is” and “as available,” without warranties of any kind, express or implied, including implied warranties of merchantability, fitness for a particular purpose, accuracy, availability, non-infringement and quiet enjoyment.</p>
+                <p>Nothing in these Terms is intended to limit any non-waivable rights you may have under applicable consumer protection law.</p>
+            </section>
+
+            <section class="section" id="liability">
+                <h2>10. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law, BrownBearAI and its developer will not be liable for any indirect, incidental, special, consequential, exemplary or punitive damages, or for any loss of profits, revenue, data, photos, goodwill or use.</p>
+                <p>To the maximum extent permitted by applicable law, BrownBearAI and its developer will also not be liable for photos or videos deleted, altered or lost through your use of the app or of a third-party service, for incorrect suggestions or analysis, or for decisions you make based on app output.</p>
+            </section>
+
+            <section class="section" id="indemnity">
+                <h2>11. Indemnity</h2>
+                <p>To the extent permitted by applicable law, you agree to indemnify and hold harmless BrownBearAI and its developer from claims, losses, liabilities, damages and expenses arising out of your misuse of the app, your violation of these Terms, your violation of applicable law, or your use of third-party services in connection with BrownBearAI.</p>
+            </section>
+
+            <section class="section" id="termination">
+                <h2>12. Termination</h2>
+                <p>These Terms apply until terminated. Your right to use BrownBearAI ends automatically if you violate these Terms. You may stop using the app at any time by removing it from your device.</p>
+            </section>
+
+            <section class="section" id="apple">
+                <h2>13. Additional Apple App Store Terms</h2>
+                <p>If you downloaded BrownBearAI through Apple's App Store or TestFlight, you acknowledge that these Terms are between you and the developer, not Apple, and that Apple is not responsible for BrownBearAI or its content.</p>
+                <ul>
+                    <li>The license granted to you is limited to use of BrownBearAI on Apple-branded products that you own or control and as permitted by the App Store usage rules.</li>
+                    <li>Apple has no obligation to provide maintenance or support services for BrownBearAI.</li>
+                    <li>Apple is not responsible for addressing claims relating to the app, including product liability claims, regulatory claims, privacy claims, claims under consumer protection law, or intellectual property infringement claims. Such claims should be directed to the developer through the contact information below.</li>
+                    <li>Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="changes">
+                <h2>14. Changes to These Terms</h2>
+                <p>These Terms may be updated from time to time. If they are updated, this page will be revised and the Last Updated date above will be changed. Your continued use of BrownBearAI after an update means you accept the revised Terms.</p>
+            </section>
+
+            <section class="section" id="contact">
+                <h2>15. Contact</h2>
+                <p>If you have questions about these Terms of Service, contact <a href="mailto:divyanshugoyal.g25@gmail.com">divyanshugoyal.g25@gmail.com</a>.</p>
+            </section>
+        </article>
+
+        <footer class="footer">
+            <div class="brand" aria-label="BrownBearAI Terms of Service footer">
+                <img class="brand-logo" src="assets/brownbearai-logo.png" alt="BrownBearAI logo">
+                <span class="brand-text">
+                    <span class="brand-name">BrownBearAI</span>
+                    <span class="brand-subtitle">Photo manager for iPhone and iPad</span>
+                </span>
+            </div>
+            <div class="footer-meta">
+                <p>BrownBearAI Terms of Service</p>
+                <p>Effective date: September 23, 2026</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

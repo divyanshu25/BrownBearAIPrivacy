@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for BrownBearAI, an iPhone and iPad app that organizes, cleans up, searches, edits and backs up your photos on your device.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="assets/brownbearai-logo.png">
+    <title>BrownBearAI Privacy Policy</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #ffffff;
+            --surface: #ffffff;
+            --text: #1d1d1f;
+            --text-muted: #6e6e73;
+            --line: rgba(29, 29, 31, 0.12);
+            --accent: #0a84ff;
+            --accent-soft: rgba(10, 132, 255, 0.08);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #000000;
+                --surface: #000000;
+                --text: #f5f5f7;
+                --text-muted: #a1a1a6;
+                --line: rgba(255, 255, 255, 0.14);
+                --accent: #2997ff;
+                --accent-soft: rgba(41, 151, 255, 0.16);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+            line-height: 1.72;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 0.08em;
+            text-underline-offset: 0.18em;
+        }
+
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 28px 20px 56px;
+        }
+
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: block;
+            flex-shrink: 0;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .brand-name {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--text);
+        }
+
+        .brand-subtitle {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+        }
+
+        .nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 36px;
+            padding: 0 12px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--surface);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav a:hover {
+            color: var(--text);
+            background: var(--accent-soft);
+        }
+
+        .nav a[aria-current="page"] {
+            color: var(--text);
+            background: var(--accent-soft);
+        }
+
+        .hero {
+            padding: 34px 0 24px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.35rem, 6vw, 3.55rem);
+            line-height: 1.06;
+            letter-spacing: -0.035em;
+            font-weight: 700;
+        }
+
+        .updated {
+            margin-top: 14px;
+            font-size: 0.97rem;
+            color: var(--text-muted);
+        }
+
+        .lede {
+            margin-top: 18px;
+            font-size: 1.08rem;
+            color: var(--text-muted);
+        }
+
+        .notice {
+            margin-top: 22px;
+            padding: 16px 18px;
+            border-radius: 16px;
+            background: var(--accent-soft);
+            border: 1px solid var(--line);
+            color: var(--text-muted);
+        }
+
+        .content {
+            border-top: 1px solid var(--line);
+        }
+
+        .section {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .section h2 {
+            margin: 0 0 12px;
+            font-size: 1.38rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        p + p {
+            margin-top: 12px;
+        }
+
+        ul {
+            margin: 14px 0 0;
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        li + li {
+            margin-top: 10px;
+        }
+
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .footer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            padding-top: 24px;
+        }
+
+        .footer-meta {
+            color: var(--text-muted);
+            font-size: 0.94rem;
+        }
+
+        .footer-meta p + p {
+            margin-top: 6px;
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                padding: 20px 16px 40px;
+            }
+
+            .site-header,
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav {
+                gap: 14px;
+            }
+
+            .hero {
+                padding: 28px 0 20px;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .lede {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 24px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header class="site-header">
+            <div class="brand" aria-label="BrownBearAI Privacy Policy">
+                <img class="brand-logo" src="assets/brownbearai-logo.png" alt="BrownBearAI logo">
+                <span class="brand-text">
+                    <span class="brand-name">BrownBearAI</span>
+                    <span class="brand-subtitle">Privacy Policy</span>
+                </span>
+            </div>
+            <nav class="nav" aria-label="Legal">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html" aria-current="page">Privacy</a>
+                <a href="terms-of-service.html">Terms</a>
+            </nav>
+        </header>
+
+        <section class="hero" aria-labelledby="privacy-title">
+            <h1 id="privacy-title">Privacy Policy</h1>
+            <p class="updated">Last Updated: September 23, 2026</p>
+            <p class="lede">
+                This Privacy Policy describes how information is handled in BrownBearAI for iPhone and iPad.
+                BrownBearAI analyzes your photos on your device. It is clear about the few cases where
+                information is sent from your device to a service you choose to use.
+            </p>
+            <div class="notice">
+                Your photos, the search index and face data stay on your device. BrownBearAI has no
+                developer-operated servers. It runs no analytics or advertising trackers and does not
+                sell your personal information.
+            </div>
+        </section>
+
+        <article class="content">
+            <section class="section" id="on-device">
+                <h2>Information Processed and Stored on Your Device</h2>
+                <p>Depending on the features you use, BrownBearAI may access, process and store the following information locally on your device:</p>
+                <ul>
+                    <li><strong>Your photo library</strong>, including photos, videos, albums, capture dates and file sizes, used to show your library, find duplicates and other clutter, and manage albums.</li>
+                    <li><strong>A search index</strong> built from your photos: what is in each photo (for example "beach" or "dog") and text that appears in it. It is created on your device by Apple's Vision framework.</li>
+                    <li><strong>Face data for People</strong>. BrownBearAI finds faces in your photos and turns each face into a numerical description ("face print") so photos of the same person can be grouped. This is done entirely on your device by a face-recognition model included in the app. Face prints and any names you give to people are stored only on your device.</li>
+                    <li><strong>Your edits</strong>, including editing settings and requests you type to the editing assistant.</li>
+                    <li><strong>"Save my edits"</strong> (off by default). When you turn it on, each assistant edit is recorded as your typed request and the resulting edit values. It never includes a photo. This record stays on your device until you export it or clear it.</li>
+                    <li><strong>Review progress and settings</strong>, such as which suggestions you have reviewed and your preferences.</li>
+                    <li><strong>Credentials</strong>. Dropbox sign-in tokens and any AI provider API key you enter are stored in the iOS Keychain.</li>
+                </ul>
+                <p>Like other app data, this information is included in your own device backups (iCloud Backup or a computer backup) if you use them. Those backups are handled by Apple under your Apple Account. The developer never receives them.</p>
+            </section>
+
+            <section class="section" id="no-backend">
+                <h2>What BrownBearAI Does Not Do</h2>
+                <ul>
+                    <li>It does not upload your photos, search index, face data or edits to developer-operated servers. There are none.</li>
+                    <li>It does not include analytics SDKs, advertising SDKs, cross-app tracking or marketing profiling tools.</li>
+                    <li>It does not use face data for anything other than grouping your own photos by person on your device.</li>
+                    <li>The developer has no account system, dashboard or cloud copy of your library.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="permissions">
+                <h2>Permissions</h2>
+                <p>BrownBearAI asks for access only when you start a feature that needs it.</p>
+                <ul>
+                    <li><strong>Photos (full access)</strong> is requested when you tap Allow Access, never when the app opens. It is used to show, analyze, organize and back up your library. You can instead pick a single photo to edit without granting library access.</li>
+                    <li><strong>Add to Photos</strong> is used to save edited photos to your library.</li>
+                    <li>Photos are only ever deleted through Apple's own confirmation dialog, which you must approve.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="leaves-device">
+                <h2>When Information Leaves Your Device</h2>
+                <p>Information leaves your device only in the situations below, each started by you:</p>
+                <ul>
+                    <li><strong>Dropbox</strong>. If you connect Dropbox, you sign in with Dropbox directly. BrownBearAI then talks straight from your device to your Dropbox account to show your Dropbox name, email and storage use, list and show the photos stored there, upload the photos and videos you choose to back up, and delete files you choose to remove. Nothing is uploaded unless you start a backup. Files in Dropbox are handled under Dropbox's terms and privacy policy.</li>
+                    <li><strong>Cloud AI editing (optional)</strong>. The editing assistant runs on your device with Apple Intelligence by default. If you choose Anthropic (Claude) or OpenAI instead and enter your own API key, your typed request and the photo's current edit values (for example "exposure +0.3") are sent directly from your device to that provider. <strong>Your photo itself is never sent.</strong> These requests do not pass through developer servers and are handled under that provider's terms and privacy policy.</li>
+                    <li><strong>iCloud Photos</strong>. If your photos are stored in iCloud and you turn on "Include iCloud Photos" (off by default), Apple's Photos framework downloads previews from iCloud so they can be analyzed on your device. That transfer is between your device and Apple.</li>
+                    <li><strong>Sharing</strong>. When you share photos, they go only to the app or person you pick in the iOS share sheet. Location information is removed from shared photos and videos by default. You can change this in Settings.</li>
+                    <li><strong>Crash reports</strong>. If you have chosen in iOS Settings to share analytics with app developers, Apple may provide anonymous crash reports to the developer. BrownBearAI adds nothing to them.</li>
+                    <li><strong>Support contact</strong>. If you email the developer, your email provider sends your address and anything you include in the message.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="use">
+                <h2>How Information Is Used</h2>
+                <p>Information is used only to provide the features you choose to use. It is never used for advertising, analytics, profiling or resale.</p>
+                <ul>
+                    <li>To show and organize your photo library and albums.</li>
+                    <li>To find duplicates, similar shots, blurry, dark and low-resolution photos, screenshots and large videos.</li>
+                    <li>To let you search your photos and browse them by person.</li>
+                    <li>To edit photos, including with the editing assistant.</li>
+                    <li>To back up the photos you choose to your own Dropbox and to free space on your device afterwards.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="security">
+                <h2>Storage and Security</h2>
+                <ul>
+                    <li>App data is stored in the app's private storage on your device and protected by iOS.</li>
+                    <li>Dropbox tokens and API keys are stored in the iOS Keychain.</li>
+                    <li>BrownBearAI removes a photo from your device after a Dropbox backup only if you turn on "Delete from Photos after upload" (off by default), and only after checking that the uploaded copy matches the original.</li>
+                    <li>Information stays on your device until you delete it or remove the app.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="sharing">
+                <h2>Sharing and Selling</h2>
+                <p>BrownBearAI does not sell your personal information. It does not share it for advertising, cross-app tracking or marketing profiling.</p>
+                <p>The only third parties that may receive information are services you choose to use through the app: Dropbox, your chosen AI provider, Apple (Apple Intelligence, iCloud Photos and crash reporting), and the apps you share photos to.</p>
+            </section>
+
+            <section class="section" id="controls">
+                <h2>Your Controls</h2>
+                <ul>
+                    <li><strong>Photos access</strong>. Change or remove it at any time in iOS Settings &gt; Privacy &amp; Security &gt; Photos.</li>
+                    <li><strong>Search and People</strong>. Settings &gt; Rebuild Search Index deletes the index and face data and builds them again. Removing the app deletes them completely.</li>
+                    <li><strong>Dropbox</strong>. Disconnect in Dropbox settings to remove the sign-in tokens from your device. Files already in your Dropbox stay there until you delete them.</li>
+                    <li><strong>AI providers</strong>. Remove an API key in the assistant settings, or keep editing on your device only.</li>
+                    <li><strong>Saved edits</strong>. Turn off "Save my edits" and clear collected examples at any time.</li>
+                    <li><strong>Location when sharing</strong>. Settings &gt; Sharing &gt; Include Location is off by default.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="children">
+                <h2>Children's Privacy</h2>
+                <p>BrownBearAI is not directed to children under 13. It has no developer-operated servers, and the developer does not knowingly collect personal information from children.</p>
+            </section>
+
+            <section class="section" id="changes">
+                <h2>Changes to This Policy</h2>
+                <p>If this Privacy Policy changes, this page will be updated and the Last Updated date above will be revised.</p>
+            </section>
+
+            <section class="section" id="contact">
+                <h2>Contact</h2>
+                <p>If you have questions about this Privacy Policy or how BrownBearAI handles information, contact <a href="mailto:divyanshugoyal.g25@gmail.com">divyanshugoyal.g25@gmail.com</a>.</p>
+                <p>If you contact the developer directly, the developer will receive your email address and any other information you choose to include in your message.</p>
+            </section>
+        </article>
+
+        <footer class="footer">
+            <div class="brand" aria-label="BrownBearAI Privacy Policy footer">
+                <img class="brand-logo" src="assets/brownbearai-logo.png" alt="BrownBearAI logo">
+                <span class="brand-text">
+                    <span class="brand-name">BrownBearAI</span>
+                    <span class="brand-subtitle">Photo manager for iPhone and iPad</span>
+                </span>
+            </div>
+            <div class="footer-meta">
+                <p>BrownBearAI Privacy Policy</p>
+                <p>Effective date: September 23, 2026</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
