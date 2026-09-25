@@ -25,6 +25,9 @@
             --max: 1080px;
         }
         * { box-sizing: border-box; }
+        /* The text halos and the tilted phones reach past the edges; the
+           page must still only scroll up and down. */
+        html, body { overflow-x: hidden; max-width: 100%; }
         html { scroll-behavior: smooth; }
         body {
             margin: 0;
@@ -38,6 +41,7 @@
            same drawings that sit behind the App Store screenshots. */
         .paper {
             position: relative;
+            overflow-x: clip;
             background: linear-gradient(180deg, var(--top) 0%, #2b1a11 45%, var(--bottom) 100%);
         }
         .paper::before {
