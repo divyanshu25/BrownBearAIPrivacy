@@ -279,7 +279,7 @@
 
         <section class="hero" aria-labelledby="privacy-title">
             <h1 id="privacy-title">Privacy Policy</h1>
-            <p class="updated">Last Updated: September 23, 2026</p>
+            <p class="updated">Last Updated: September 28, 2026</p>
             <p class="lede">
                 This Privacy Policy describes how information is handled in BrownBearAI for iPhone and iPad.
                 BrownBearAI analyzes your photos on your device. It is clear about the few cases where
@@ -301,6 +301,8 @@
                     <li><strong>A search index</strong> built from your photos: what is in each photo (for example "beach" or "dog") and text that appears in it. It is created on your device by Apple's Vision framework.</li>
                     <li><strong>Face data for People</strong>. BrownBearAI finds faces in your photos and turns each face into a numerical description ("face print") so photos of the same person can be grouped. This is done entirely on your device by a face-recognition model included in the app. Face prints and any names you give to people are stored only on your device.</li>
                     <li><strong>Your edits</strong>, including editing settings and requests you type to the editing assistant.</li>
+                    <li><strong>Movies and compressed videos</strong>. Movies you make from an album, and smaller copies of large videos you choose to compress, are made on your device. Nothing is uploaded to make them.</li>
+                    <li><strong>Your songs</strong>. If you choose a song of your own for a movie, BrownBearAI reads the list of songs on your device and the song file you pick, only to add it to that movie. The list is not stored or sent anywhere.</li>
                     <li><strong>"Save my edits"</strong> (off by default). When you turn it on, each assistant edit is recorded as your typed request and the resulting edit values. It never includes a photo. This record stays on your device until you export it or clear it.</li>
                     <li><strong>Review progress and settings</strong>, such as which suggestions you have reviewed and your preferences.</li>
                     <li><strong>Credentials</strong>. Dropbox sign-in tokens and any AI provider API key you enter are stored in the iOS Keychain.</li>
@@ -323,8 +325,9 @@
                 <p>BrownBearAI asks for access only when you start a feature that needs it.</p>
                 <ul>
                     <li><strong>Photos (full access)</strong> is requested when you tap Allow Access, never when the app opens. It is used to show, analyze, organize and back up your library. You can instead pick a single photo to edit without granting library access.</li>
-                    <li><strong>Add to Photos</strong> is used to save edited photos to your library.</li>
-                    <li>Photos are only ever deleted through Apple's own confirmation dialog, which you must approve.</li>
+                    <li><strong>Add to Photos</strong> is used to save edited photos, movies you make and compressed videos to your library.</li>
+                    <li><strong>Media &amp; Apple Music</strong> is requested only when you open Your Songs while making a movie, never when the app opens. It is used to list songs on your device so you can add one to a movie. The music that comes with the app needs no permission.</li>
+                    <li>Photos are only ever deleted through Apple's own confirmation dialog, which you must approve. After you compress a video, its original is kept until you choose to delete it.</li>
                 </ul>
             </section>
 
@@ -349,6 +352,7 @@
                     <li>To find duplicates, similar shots, blurry, dark and low-resolution photos, screenshots and large videos.</li>
                     <li>To let you search your photos and browse them by person.</li>
                     <li>To edit photos, including with the editing assistant.</li>
+                    <li>To make movies from your albums, with music you choose, and to make smaller copies of large videos.</li>
                     <li>To back up the photos you choose to your own Dropbox and to free space on your device afterwards.</li>
                 </ul>
             </section>
@@ -373,6 +377,7 @@
                 <h2>Your Controls</h2>
                 <ul>
                     <li><strong>Photos access</strong>. Change or remove it at any time in iOS Settings &gt; Privacy &amp; Security &gt; Photos.</li>
+                    <li><strong>Songs access</strong>. Change or remove it at any time in iOS Settings &gt; Privacy &amp; Security &gt; Media &amp; Apple Music.</li>
                     <li><strong>Search and People</strong>. Settings &gt; Rebuild Search Index deletes the index and face data and builds them again. Removing the app deletes them completely.</li>
                     <li><strong>Dropbox</strong>. Disconnect in Dropbox settings to remove the sign-in tokens from your device. Files already in your Dropbox stay there until you delete them.</li>
                     <li><strong>AI providers</strong>. Remove an API key in the assistant settings, or keep editing on your device only.</li>
@@ -403,7 +408,7 @@
                 <img class="brand-logo" src="assets/brownbearai-logo.png" alt="BrownBearAI logo">
                 <span class="brand-text">
                     <span class="brand-name">BrownBearAI</span>
-                    <span class="brand-subtitle">Photo manager for iPhone and iPad</span>
+                    <span class="brand-subtitle">Memories, sorted. For iPhone and iPad</span>
                 </span>
             </div>
             <div class="footer-meta">
