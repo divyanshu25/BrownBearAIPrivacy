@@ -279,7 +279,7 @@
 
         <section class="hero" aria-labelledby="privacy-title">
             <h1 id="privacy-title">Privacy Policy</h1>
-            <p class="updated">Last Updated: September 28, 2026</p>
+            <p class="updated">Last Updated: October 8, 2026</p>
             <p class="lede">
                 This Privacy Policy describes how information is handled in BrownBearAI for iPhone and iPad.
                 BrownBearAI analyzes your photos on your device. It is clear about the few cases where
@@ -300,12 +300,11 @@
                     <li><strong>Your photo library</strong>, including photos, videos, albums, capture dates and file sizes, used to show your library, find duplicates and other clutter, and manage albums.</li>
                     <li><strong>A search index</strong> built from your photos: what is in each photo (for example "beach" or "dog") and text that appears in it. It is created on your device by Apple's Vision framework.</li>
                     <li><strong>Face data for People</strong>. BrownBearAI finds faces in your photos and turns each face into a numerical description ("face print") so photos of the same person can be grouped. This is done entirely on your device by a face-recognition model included in the app. Face prints and any names you give to people are stored only on your device.</li>
-                    <li><strong>Your edits</strong>, including editing settings and requests you type to the editing assistant.</li>
+                    <li><strong>Your edits</strong>: the light, color, filter and crop settings of a photo you edit.</li>
                     <li><strong>Movies and compressed videos</strong>. Movies you make from an album, and smaller copies of large videos you choose to compress, are made on your device. Nothing is uploaded to make them.</li>
                     <li><strong>Your songs</strong>. If you choose a song of your own for a movie, BrownBearAI reads the list of songs on your device and the song file you pick, only to add it to that movie. The list is not stored or sent anywhere.</li>
-                    <li><strong>"Save my edits"</strong> (off by default). When you turn it on, each assistant edit is recorded as your typed request and the resulting edit values. It never includes a photo. This record stays on your device until you export it or clear it.</li>
                     <li><strong>Review progress and settings</strong>, such as which suggestions you have reviewed and your preferences.</li>
-                    <li><strong>Credentials</strong>. Dropbox sign-in tokens and any AI provider API key you enter are stored in the iOS Keychain.</li>
+                    <li><strong>Credentials</strong>. Dropbox sign-in tokens are stored in the iOS Keychain.</li>
                 </ul>
                 <p>Like other app data, this information is included in your own device backups (iCloud Backup or a computer backup) if you use them. Those backups are handled by Apple under your Apple Account. The developer never receives them.</p>
             </section>
@@ -336,7 +335,6 @@
                 <p>Information leaves your device only in the situations below, each started by you:</p>
                 <ul>
                     <li><strong>Dropbox</strong>. If you connect Dropbox, you sign in with Dropbox directly. BrownBearAI then talks straight from your device to your Dropbox account to show your Dropbox name, email and storage use, list and show the photos stored there, upload the photos and videos you choose to back up, and delete files you choose to remove. Nothing is uploaded unless you start a backup. Files in Dropbox are handled under Dropbox's terms and privacy policy.</li>
-                    <li><strong>Cloud AI editing (optional)</strong>. The editing assistant runs on your device with Apple Intelligence by default. If you choose Anthropic (Claude) or OpenAI instead and enter your own API key, your typed request and the photo's current edit values (for example "exposure +0.3") are sent directly from your device to that provider. <strong>Your photo itself is never sent.</strong> These requests do not pass through developer servers and are handled under that provider's terms and privacy policy.</li>
                     <li><strong>iCloud Photos</strong>. If your photos are stored in iCloud and you turn on "Include iCloud Photos" (off by default), Apple's Photos framework downloads previews from iCloud so they can be analyzed on your device. That transfer is between your device and Apple.</li>
                     <li><strong>Sharing</strong>. When you share photos, they go only to the app or person you pick in the iOS share sheet. Location information is removed from shared photos and videos by default. You can change this in Settings.</li>
                     <li><strong>Crash reports</strong>. If you have chosen in iOS Settings to share analytics with app developers, Apple may provide anonymous crash reports to the developer. BrownBearAI adds nothing to them.</li>
@@ -351,7 +349,7 @@
                     <li>To show and organize your photo library and albums.</li>
                     <li>To find duplicates, similar shots, blurry, dark and low-resolution photos, screenshots and large videos.</li>
                     <li>To let you search your photos and browse them by person.</li>
-                    <li>To edit photos, including with the editing assistant.</li>
+                    <li>To edit photos.</li>
                     <li>To make movies from your albums, with music you choose, and to make smaller copies of large videos.</li>
                     <li>To back up the photos you choose to your own Dropbox and to free space on your device afterwards.</li>
                 </ul>
@@ -361,7 +359,7 @@
                 <h2>Storage and Security</h2>
                 <ul>
                     <li>App data is stored in the app's private storage on your device and protected by iOS.</li>
-                    <li>Dropbox tokens and API keys are stored in the iOS Keychain.</li>
+                    <li>Dropbox tokens are stored in the iOS Keychain.</li>
                     <li>BrownBearAI removes a photo from your device after a Dropbox backup only if you turn on "Delete from Photos after upload" (off by default), and only after checking that the uploaded copy matches the original.</li>
                     <li>Information stays on your device until you delete it or remove the app.</li>
                 </ul>
@@ -370,7 +368,7 @@
             <section class="section" id="sharing">
                 <h2>Sharing and Selling</h2>
                 <p>BrownBearAI does not sell your personal information. It does not share it for advertising, cross-app tracking or marketing profiling.</p>
-                <p>The only third parties that may receive information are services you choose to use through the app: Dropbox, your chosen AI provider, Apple (Apple Intelligence, iCloud Photos and crash reporting), and the apps you share photos to.</p>
+                <p>The only third parties that may receive information are services you choose to use through the app: Dropbox, Apple (iCloud Photos and crash reporting), and the apps you share photos to.</p>
             </section>
 
             <section class="section" id="controls">
@@ -380,8 +378,6 @@
                     <li><strong>Songs access</strong>. Change or remove it at any time in iOS Settings &gt; Privacy &amp; Security &gt; Media &amp; Apple Music.</li>
                     <li><strong>Search and People</strong>. Settings &gt; Rebuild Search Index deletes the index and face data and builds them again. Removing the app deletes them completely.</li>
                     <li><strong>Dropbox</strong>. Disconnect in Dropbox settings to remove the sign-in tokens from your device. Files already in your Dropbox stay there until you delete them.</li>
-                    <li><strong>AI providers</strong>. Remove an API key in the assistant settings, or keep editing on your device only.</li>
-                    <li><strong>Saved edits</strong>. Turn off "Save my edits" and clear collected examples at any time.</li>
                     <li><strong>Location when sharing</strong>. Settings &gt; Sharing &gt; Include Location is off by default.</li>
                 </ul>
             </section>
