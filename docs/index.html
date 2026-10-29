@@ -134,6 +134,36 @@
         .reveal.in { opacity: 1; transform: none; }
         @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
+        /* iPhone Duo: a closed Duo opens as you scroll. The right half swings
+           open like a book's cover; its back is the outer screen. Without
+           script, or with reduced motion, it is simply open. */
+        .duo-stage.scrolls { height: 240vh; }
+        .duo-sticky { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(22px, 4vh, 40px); padding: 70px 20px; }
+        .duo-stage.scrolls .duo-sticky { position: sticky; top: 64px; height: calc(100vh - 64px); padding: 0 20px; }
+        .duo-copy { text-align: center; max-width: 640px; }
+        .duo-copy .kicker { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+        .duo-copy h2 { font-size: clamp(32px, 5vw, 52px); letter-spacing: -0.03em; line-height: 1.05; margin: 6px 0 12px; font-weight: 800; }
+        .duo-copy p { color: var(--cream-soft); font-size: 17px; margin: 0 auto; max-width: 52ch; }
+        .duo-device {
+            --open: 1;
+            --w: min(860px, 90vw, calc((100vh - 360px) * 1.42));
+            width: var(--w); aspect-ratio: 2853 / 2007; position: relative; perspective: 2600px;
+            /* Closed, the phone is the left half: centre it. */
+            transform: translateX(calc((1 - var(--open)) * var(--w) / 4));
+        }
+        .duo-left, .duo-face { position: absolute; top: 0; bottom: 0; width: 50%; background-color: #0a0a0a; background-repeat: no-repeat; border: 7px solid #0a0a0a; }
+        .duo-left { left: 0; border-right: 0; border-radius: 30px 0 0 30px; background-image: url("assets/screens/duo-inner.jpg"); background-size: 200% 100%; background-position: left center;
+            box-shadow: 0 0 0 3px #584234, 0 0 60px rgba(234, 144, 74, 0.24), 0 40px 70px -30px rgba(0,0,0,0.8); }
+        .duo-cover { position: absolute; top: 0; bottom: 0; left: 50%; width: 50%; transform-origin: left center; transform-style: preserve-3d;
+            transform: rotateY(calc((1 - var(--open)) * -180deg)); }
+        .duo-face { left: 0; width: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden;
+            box-shadow: 0 0 0 3px #584234, 0 0 60px rgba(234, 144, 74, 0.24), 0 40px 70px -30px rgba(0,0,0,0.8); }
+        .duo-face.inner { border-left: 0; border-radius: 0 30px 30px 0; background-image: url("assets/screens/duo-inner.jpg"); background-size: 200% 100%; background-position: right center; }
+        .duo-face.outer { transform: rotateY(180deg); border-radius: 30px; background-image: url("assets/screens/duo-outer.jpg"); background-size: cover; background-position: center top; }
+        /* The crease, faint once it's flat. */
+        .duo-device::after { content: ""; position: absolute; top: 7px; bottom: 7px; left: calc(50% - 1px); width: 2px; pointer-events: none;
+            background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.08) 20%, rgba(255,255,255,0.08) 80%, rgba(255,255,255,0)); opacity: var(--open); }
+
         /* Private by design */
         .private { padding: 70px 0; }
         .private .box { background: var(--card); border: 1px solid var(--line); border-radius: 28px; padding: clamp(24px, 4vw, 44px); display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: center; }
@@ -176,6 +206,7 @@
             <nav class="nav-links">
                 <a class="hide-sm" href="#how">How it works</a>
                 <a class="hide-sm" href="#movies">Movies</a>
+                <a class="hide-sm" href="#duo">iPhone Duo</a>
                 <a class="hide-sm" href="#privacy">Privacy</a>
                 <a class="hide-sm" href="#faq">Questions</a>
                 <a class="btn small" href="https://apps.apple.com/us/app/brownbearai/id6796580170">Get the app</a>
@@ -193,7 +224,7 @@
                 <div class="cta-row reveal in">
                     <a class="btn" href="https://apps.apple.com/us/app/brownbearai/id6796580170">Download on the App Store</a>
                     <a class="btn ghost" href="#how">See how it works</a>
-                    <span class="cta-note">Out now on the App Store · Free · No ads · No account · iPhone and iPad, iOS 26</span>
+                    <span class="cta-note">Out now on the App Store · Free · No ads · No account · iPhone, iPhone Duo and iPad</span>
                 </div>
                 </div>
                 <div class="hero-phones">
@@ -339,6 +370,25 @@
             </div>
         </section>
 
+        <section class="duo" id="duo">
+            <div class="duo-stage">
+                <div class="duo-sticky">
+                    <div class="duo-copy quiet">
+                        <div class="kicker">iPhone Duo</div>
+                        <h2>Unfold your memories.</h2>
+                        <p>Open it, and BrownBearAI opens with you: more of your photos at a glance, the best shot side by side, and Keep or Delete beside the photo, never on the fold. Fold it mid-task and you're right where you were.</p>
+                    </div>
+                    <div class="duo-device" role="img" aria-label="iPhone Duo opening from Clean Up on the outer screen to the photo library across the inner screen">
+                        <div class="duo-left"></div>
+                        <div class="duo-cover">
+                            <div class="duo-face inner"></div>
+                            <div class="duo-face outer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="private" id="privacy">
             <div class="wrap">
                 <div class="box">
@@ -387,7 +437,7 @@
                     </details>
                     <details>
                         <summary>Which devices?</summary>
-                        <p>iPhone and iPad on iOS 26 or later. Everything, including movies and Compress, works on any iPhone or iPad running iOS 26.</p>
+                        <p>iPhone, iPhone Duo and iPad on iOS 26 or later. Everything, including movies and Compress, works on all of them. On iPhone Duo it uses the whole screen, closed or open, and folding it keeps your place.</p>
                     </details>
                 </div>
             </div>
@@ -421,6 +471,25 @@
         // Sections fade in as they arrive; nothing moves for people who prefer reduced motion.
         const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const items = document.querySelectorAll('.reveal');
+        // iPhone Duo: scrolling through the section opens the Duo, eased so
+        // it settles flat before the section leaves.
+        const stage = document.querySelector('.duo-stage');
+        const device = document.querySelector('.duo-device');
+        if (stage && device && !reduce) {
+            stage.classList.add('scrolls');
+            let queued = false;
+            const update = () => {
+                queued = false;
+                const box = stage.getBoundingClientRect();
+                const run = Math.max(1, box.height - window.innerHeight);
+                const t = Math.min(1, Math.max(0, -box.top / (run * 0.7)));
+                const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+                device.style.setProperty('--open', eased.toFixed(4));
+            };
+            addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
+            addEventListener('resize', update);
+            update();
+        }
         if (reduce || !('IntersectionObserver' in window)) {
             items.forEach(el => el.classList.add('in'));
         } else {
