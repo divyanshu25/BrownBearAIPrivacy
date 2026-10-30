@@ -28,7 +28,9 @@
         * { box-sizing: border-box; }
         /* The text halos and the tilted phones reach past the edges; the
            page must still only scroll up and down. */
-        html, body { overflow-x: hidden; max-width: 100%; }
+        /* clip, not hidden: hidden makes the page its own scroller, and the
+           Duo section's sticky stage then scrolls away instead of staying. */
+        html, body { overflow-x: clip; max-width: 100%; }
         html { scroll-behavior: smooth; }
         body {
             margin: 0;
@@ -134,10 +136,11 @@
         .reveal.in { opacity: 1; transform: none; }
         @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
-        /* iPhone Duo: a closed Duo opens as you scroll. The right half swings
-           open like a book's cover; its back is the outer screen. Without
-           script, or with reduced motion, it is simply open. */
-        .duo-stage.scrolls { height: 240vh; }
+        /* iPhone Duo: a closed Duo opens as you scroll, like a book: the
+           front half swings open to the left on the hinge in the middle; its
+           back is the outer screen. Without script, or with reduced motion,
+           it is simply open. */
+        .duo-stage.scrolls { height: 190vh; }
         .duo-sticky { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(22px, 4vh, 40px); padding: 70px 20px; }
         .duo-stage.scrolls .duo-sticky { position: sticky; top: 64px; height: calc(100vh - 64px); padding: 0 20px; }
         .duo-copy { text-align: center; max-width: 640px; }
@@ -146,19 +149,19 @@
         .duo-copy p { color: var(--cream-soft); font-size: 17px; margin: 0 auto; max-width: 52ch; }
         .duo-device {
             --open: 1;
-            --w: min(860px, 90vw, calc((100vh - 360px) * 1.42));
+            --w: min(860px, 90vw, calc((100vh - 440px) * 1.42));
             width: var(--w); aspect-ratio: 2853 / 2007; position: relative; perspective: 2600px;
-            /* Closed, the phone is the left half: centre it. */
-            transform: translateX(calc((1 - var(--open)) * var(--w) / 4));
+            /* Closed, the phone is the right half: centre it. */
+            transform: translateX(calc((1 - var(--open)) * var(--w) / -4));
         }
-        .duo-left, .duo-face { position: absolute; top: 0; bottom: 0; width: 50%; background-color: #0a0a0a; background-repeat: no-repeat; border: 7px solid #0a0a0a; }
-        .duo-left { left: 0; border-right: 0; border-radius: 30px 0 0 30px; background-image: url("assets/screens/duo-inner.jpg"); background-size: 200% 100%; background-position: left center;
+        .duo-right, .duo-face { position: absolute; top: 0; bottom: 0; width: 50%; background-color: #0a0a0a; background-repeat: no-repeat; border: 7px solid #0a0a0a; }
+        .duo-right { left: 50%; border-left: 0; border-radius: 0 30px 30px 0; background-image: url("assets/screens/duo-inner.jpg"); background-size: 200% 100%; background-position: right center;
             box-shadow: 0 0 0 3px #584234, 0 0 60px rgba(234, 144, 74, 0.24), 0 40px 70px -30px rgba(0,0,0,0.8); }
-        .duo-cover { position: absolute; top: 0; bottom: 0; left: 50%; width: 50%; transform-origin: left center; transform-style: preserve-3d;
-            transform: rotateY(calc((1 - var(--open)) * -180deg)); }
+        .duo-cover { position: absolute; top: 0; bottom: 0; left: 0; width: 50%; transform-origin: right center; transform-style: preserve-3d;
+            transform: rotateY(calc((1 - var(--open)) * 180deg)); }
         .duo-face { left: 0; width: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden;
             box-shadow: 0 0 0 3px #584234, 0 0 60px rgba(234, 144, 74, 0.24), 0 40px 70px -30px rgba(0,0,0,0.8); }
-        .duo-face.inner { border-left: 0; border-radius: 0 30px 30px 0; background-image: url("assets/screens/duo-inner.jpg"); background-size: 200% 100%; background-position: right center; }
+        .duo-face.inner { border-right: 0; border-radius: 30px 0 0 30px; background-image: url("assets/screens/duo-inner.jpg"); background-size: 200% 100%; background-position: left center; }
         .duo-face.outer { transform: rotateY(180deg); border-radius: 30px; background-image: url("assets/screens/duo-outer.jpg"); background-size: cover; background-position: center top; }
         /* The crease, faint once it's flat. */
         .duo-device::after { content: ""; position: absolute; top: 7px; bottom: 7px; left: calc(50% - 1px); width: 2px; pointer-events: none;
@@ -379,7 +382,7 @@
                         <p>Open it, and BrownBearAI opens with you: more of your photos at a glance, the best shot side by side, and Keep or Delete beside the photo, never on the fold. Fold it mid-task and you're right where you were.</p>
                     </div>
                     <div class="duo-device" role="img" aria-label="iPhone Duo opening from Clean Up on the outer screen to the photo library across the inner screen">
-                        <div class="duo-left"></div>
+                        <div class="duo-right"></div>
                         <div class="duo-cover">
                             <div class="duo-face inner"></div>
                             <div class="duo-face outer"></div>
