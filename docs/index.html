@@ -172,16 +172,12 @@
         @media (min-width: 900px) { .movie { grid-template-columns: auto 1fr; gap: 72px; } }
         @media (max-width: 899px) { .movie .pair .phone { --pw: min(200px, 40vw); } .movie .pair { gap: 16px; flex-wrap: nowrap; } .movie .pair figure { max-width: 44vw; } }
 
-        /* Private, and the maker. */
+        /* Private by design. */
         .points { display: grid; gap: 18px; max-width: 1000px; margin: 0 auto; }
         .points .point { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px; display: grid; gap: 6px; }
         .points .point p { font-size: 16px; line-height: 24px; }
         .points a { color: var(--cream); }
         @media (min-width: 900px) { .points { grid-template-columns: repeat(3, 1fr); } }
-        .maker { max-width: 640px; margin: 48px auto 0; padding: 32px; border-radius: 24px; background: rgba(28, 17, 11, 0.72); border: 1px solid var(--line); display: grid; gap: 16px; }
-        .maker p { font-size: 18px; line-height: 28px; color: var(--cream); }
-        .maker .sign { display: flex; align-items: center; gap: 12px; font-size: 15px; line-height: 20px; color: var(--cream-quiet); }
-        .maker .sign img { width: 40px; height: 40px; border-radius: 10px; }
 
         /* iPhone Duo: a closed Duo opens as you scroll, like a book: the
            front half swings open to the left on the hinge in the middle;
@@ -429,10 +425,6 @@
                     <div class="point"><h3>Nothing leaves unless you send it</h3><p>Only photos you choose to back up go anywhere, to your own Dropbox.</p></div>
                     <div class="point"><h3>Deletes you can undo</h3><p>Every delete goes through Photos and waits in Recently Deleted for 30 days. <a href="privacy-policy.html">Read the privacy policy</a></p></div>
                 </div>
-                <div class="maker reveal">
-                    <p>BrownBearAI is made by one person. It's free because a photo app should look after your memories, not sell you a subscription to clean them. Every message is read.</p>
-                    <div class="sign"><img src="assets/brownbearai-logo.png" alt="" width="40" height="40"><span>Divyanshu Goyal<br>Maker of BrownBearAI</span></div>
-                </div>
             </div>
         </section>
 
@@ -442,7 +434,7 @@
                 <div class="list reveal">
                     <details>
                         <summary>Why is it free?</summary>
-                        <p>It's made by one independent developer who wanted a photo app without a subscription. No in-app purchases, no ads, nothing to sign up for.</p>
+                        <p>Your memories shouldn't come with a subscription. There are no in-app purchases, no ads and nothing to sign up for.</p>
                     </details>
                     <details>
                         <summary>Can it delete something I didn't mean to?</summary>
