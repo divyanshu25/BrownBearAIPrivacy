@@ -129,12 +129,14 @@
         .hero h1 { max-width: none; }
         .hero .lede { margin: 0 auto 28px; }
         .hero .trust { margin-top: 22px; }
-        .fan { display: flex; justify-content: center; align-items: flex-end; gap: 22px; margin-top: 56px; height: 470px; overflow: hidden; }
-        .fan .phone { --pw: 280px; }
-        .fan .phone:nth-child(1) { transform: translateY(40px) rotate(-6deg); }
-        .fan .phone:nth-child(2) { --pw: 300px; align-self: flex-start; }
-        .fan .phone:nth-child(3) { transform: translateY(40px) rotate(6deg); }
-        @media (max-width: 760px) { .fan { height: 420px; } .fan .phone:nth-child(1), .fan .phone:nth-child(3) { display: none; } .fan .phone:nth-child(2) { --pw: min(300px, 76vw); } }
+        /* Whole phones, never clipped: a box with a fixed height cut their
+           tops and bottoms and squared off the glow. */
+        .fan { display: flex; justify-content: center; align-items: flex-start; gap: 28px; margin-top: 64px; padding: 0 0 24px; }
+        .fan .phone { --pw: 260px; }
+        .fan .phone:nth-child(1) { transform: translateY(48px) rotate(-6deg); }
+        .fan .phone:nth-child(2) { --pw: 290px; }
+        .fan .phone:nth-child(3) { transform: translateY(48px) rotate(6deg); }
+        @media (max-width: 760px) { .fan .phone:nth-child(1), .fan .phone:nth-child(3) { display: none; } .fan .phone:nth-child(2) { --pw: min(290px, 76vw); } }
 
         /* How: three beliefs in practice, no phones. */
         .how { display: grid; gap: 18px; }
