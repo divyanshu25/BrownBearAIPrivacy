@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="apple-itunes-app" content="app-id=6796580170">
-    <title>BrownBearAI: free iPhone photo cleaner, no subscription</title>
-    <meta name="description" content="Get your space back and keep the memories. BrownBearAI finds duplicates, blurry shots and big videos, keeps the best of each, and turns albums into movies. Free, no ads, no account, all on your iPhone.">
-    <meta name="theme-color" content="#2a1a11">
+    <title>BrownBearAI: every photo is a memory. Free iPhone photo app, no subscription</title>
+    <meta name="description" content="Every photo is a memory. BrownBearAI gives yours the attention they deserve: it keeps the best of every moment, clears duplicates and blurry shots, shrinks big videos and turns albums into movies. Free, no ads, no account, all on your iPhone.">
+    <meta name="theme-color" content="#3e281c">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://divyanshu25.github.io/BrownBearAIPrivacy/">
-    <meta property="og:title" content="BrownBearAI: get your space back, keep the memories">
-    <meta property="og:description" content="Free photo cleanup, video compression and movies for iPhone. No subscription, no ads, no account. Everything stays on your phone.">
+    <meta property="og:title" content="BrownBearAI: every photo is a memory">
+    <meta property="og:description" content="Your memories deserve attention. BrownBearAI keeps the best of every moment, clears what buries them and brings them back as movies. Free, private, on your iPhone.">
     <meta property="og:image" content="https://divyanshu25.github.io/BrownBearAIPrivacy/assets/share.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -30,187 +30,184 @@
     </script>
     <style>
         :root {
-            --espresso: #2a1a11;     /* Make room, the hero */
-            --roast: #35221a;        /* Relive: a shade warmer */
-            --bean: #1c130e;         /* the honest part, Questions */
-            --night: #0c0806;        /* Duo: near black so the device glows */
+            --top: #3e281c;          /* espresso, lit from above (the App Store canvas) */
+            --bottom: #120d0a;
             --cream: #fbf7f2;
             --cream-body: rgba(251, 247, 242, 0.82);
             --cream-quiet: rgba(251, 247, 242, 0.62);
             --line: rgba(251, 247, 242, 0.10);
-            --card: rgba(251, 247, 242, 0.05);
-            --accent: #ea904a;       /* Color.bearAccent: the main action and the big numbers only */
+            --card: rgba(255, 255, 255, 0.06);
+            --accent: #ea904a;       /* Color.bearAccent */
             --accent-ink: #1f1208;
             --max: 1120px;
-            --nav: 56px;
+            --nav: 60px;
         }
         * { box-sizing: border-box; }
         /* clip, not hidden: hidden makes the page its own scroller, and the
            Duo section's sticky stage then scrolls away instead of staying. */
         html, body { overflow-x: clip; max-width: 100%; }
         body {
-            margin: 0; background: var(--espresso); color: var(--cream);
+            margin: 0; color: var(--cream); background: var(--bottom);
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 17px; line-height: 26px; -webkit-font-smoothing: antialiased;
         }
+        /* The wallpaper: the espresso gradient with the doodles on top, the
+           same drawings that sit behind the App Store screenshots, all the
+           way down. */
+        .paper { position: relative; overflow-x: clip; background: linear-gradient(180deg, var(--top) 0%, #2b1a11 45%, var(--bottom) 100%); }
+        .paper::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+            background: url("assets/doodles.png") top center / 1400px auto repeat; opacity: 0.10; }
+        .paper > * { position: relative; }
+        /* Words sit in a quiet pool, the way the App Store headline does. */
+        .quiet { position: relative; isolation: isolate; }
+        .quiet::before { content: ""; position: absolute; inset: -28px -44px; z-index: -1; border-radius: 40px;
+            background: radial-gradient(ellipse at center, rgba(28, 17, 11, 0.78) 0%, rgba(28, 17, 11, 0.5) 45%, rgba(28, 17, 11, 0) 72%); }
         a { color: inherit; }
         img { display: block; max-width: 100%; height: auto; }
         .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
-        h1, h2, h3 { font-weight: 700; margin: 0; }
-        h1 { font-size: 44px; line-height: 48px; letter-spacing: -0.035em; }
+        h1, h2, h3 { font-weight: 800; margin: 0; }
+        h1 { font-size: 46px; line-height: 50px; letter-spacing: -0.035em; }
         h2 { font-size: 32px; line-height: 36px; letter-spacing: -0.03em; }
-        h3 { font-size: 22px; line-height: 28px; letter-spacing: -0.015em; }
+        h3 { font-size: 22px; line-height: 28px; letter-spacing: -0.015em; font-weight: 700; }
         p { margin: 0; color: var(--cream-body); }
-        .lede { font-size: 17px; line-height: 26px; max-width: 36ch; }
+        .lede { font-size: 17px; line-height: 26px; max-width: 40ch; }
         @media (min-width: 900px) {
-            body { font-size: 19px; line-height: 30px; }
+            body { font-size: 18px; line-height: 28px; }
             h1 { font-size: 80px; line-height: 84px; }
-            h2 { font-size: 56px; line-height: 60px; }
-            h3 { font-size: 28px; line-height: 34px; }
+            h2 { font-size: 50px; line-height: 54px; }
+            h3 { font-size: 26px; line-height: 32px; }
             .lede { font-size: 21px; line-height: 32px; }
         }
+        /* The App Store headline motif: an orange bar under the title. */
+        .bar { width: 76px; height: 7px; border-radius: 999px; background: var(--accent); margin: 20px auto 22px; }
+        .kicker { color: var(--accent); font-weight: 700; font-size: 13px; line-height: 18px; letter-spacing: 0.08em; text-transform: uppercase; }
 
-        /* Chapters: flat bands of colour, a hairline between. */
-        .band { padding: 96px 0; border-top: 1px solid var(--line); }
-        @media (min-width: 900px) { .band { padding: 160px 0; } }
-        .band.roast { background: var(--roast); }
-        .band.bean { background: var(--bean); }
-        .band-head { max-width: 760px; margin: 0 auto 40px; text-align: center; }
-        .band-head .lede { margin: 16px auto 0; }
-        @media (min-width: 900px) { .band-head { margin-bottom: 64px; } }
-
-        /* The doodles: only behind the hero and the close. */
-        .doodled { position: relative; isolation: isolate; }
-        .doodled::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-            background: url("assets/doodles.png") top center / 1400px auto repeat; opacity: 0.06; }
+        /* Sections: rhythm by spacing on the one wallpaper. */
+        section { padding: 104px 0 0; }
+        .head { max-width: 760px; margin: 0 auto 48px; text-align: center; display: grid; justify-items: center; }
+        .head h2 { margin-top: 8px; max-width: 18ch; }
+        .head .bar { margin: 18px auto 18px; width: 56px; height: 5px; }
+        .head .lede { margin: 0 auto; }
 
         /* Nav */
-        .nav { position: sticky; top: 0; z-index: 20; height: var(--nav); background: rgba(42, 26, 17, 0.82);
-            backdrop-filter: saturate(150%) blur(16px); -webkit-backdrop-filter: saturate(150%) blur(16px); border-bottom: 1px solid var(--line); }
+        .nav { position: sticky; top: 0; z-index: 20; height: var(--nav); background: rgba(62, 40, 28, 0.80);
+            backdrop-filter: saturate(140%) blur(14px); -webkit-backdrop-filter: saturate(140%) blur(14px); border-bottom: 1px solid var(--line); }
         .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 100%; }
-        .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; text-decoration: none; }
-        .brand img { width: 30px; height: 30px; border-radius: 7px; }
-        .nav-links { display: flex; gap: 24px; align-items: center; font-size: 14px; }
+        .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; letter-spacing: -0.01em; }
+        .brand img { width: 32px; height: 32px; border-radius: 8px; }
+        .nav-links { display: flex; gap: 22px; align-items: center; font-size: 15px; }
         .nav-links a { text-decoration: none; color: var(--cream-quiet); }
         .nav-links a:hover { color: var(--cream); }
-        .get-small { background: var(--accent); color: var(--accent-ink) !important; font-weight: 700; padding: 7px 14px; border-radius: 999px; }
+        .get-small { background: var(--accent); color: var(--accent-ink) !important; font-weight: 700; padding: 8px 15px; border-radius: 999px; font-size: 14px; }
         @media (max-width: 760px) { .nav-links .wide { display: none; } }
 
         /* Apple's badge (stand-in until the official SVG from Apple's
            marketing tools replaces it; same size and clear space). */
-        .badge { display: inline-flex; align-items: center; gap: 8px; height: 48px; padding: 0 16px 0 12px; border-radius: 10px;
+        .badge { display: inline-flex; align-items: center; gap: 8px; height: 50px; padding: 0 16px 0 12px; border-radius: 11px;
             background: #000; color: #fff; text-decoration: none; border: 1px solid #a6a6a6; }
         .badge svg { width: 22px; height: 26px; fill: #fff; }
         .badge span { display: flex; flex-direction: column; line-height: 1; text-align: left; }
         .badge small { font-size: 10px; letter-spacing: 0.01em; }
         .badge b { font-size: 21px; font-weight: 600; letter-spacing: -0.02em; margin-top: 2px; }
-        .install { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .install { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .qr { display: none; align-items: center; gap: 12px; font-size: 13px; line-height: 18px; color: var(--cream-quiet); text-align: left; }
         .qr svg { width: 72px; height: 72px; padding: 6px; background: var(--cream); border-radius: 10px; }
         @media (hover: hover) and (min-width: 900px) { .qr { display: flex; } }
+        .trust { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 24px; font-size: 15px; line-height: 20px; font-weight: 600; }
+        .trust li { display: flex; align-items: center; gap: 7px; }
+        .trust svg { width: 17px; height: 17px; stroke: var(--accent); fill: none; stroke-width: 2.4; flex: none; }
 
-        /* Phones: three fixed sizes, a true corner radius, one soft shadow. */
-        .phone { --pw: 260px; width: var(--pw); aspect-ratio: 640 / 1391; border-radius: calc(var(--pw) * 0.135); background: #050505;
-            padding: calc(var(--pw) * 0.03); box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7); flex: none; }
-        .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: calc(var(--pw) * 0.11); }
-        .phone.hero-size { --pw: 320px; box-shadow: 0 0 80px rgba(234, 144, 74, 0.22), 0 40px 70px -24px rgba(0, 0, 0, 0.8); }
-        .phone.small { --pw: 200px; }
+        /* Phone: rounded card with the amber glow the screenshots have. */
+        .phone { --pw: 280px; width: var(--pw); aspect-ratio: 640 / 1391; border-radius: calc(var(--pw) * 0.14); background: #0a0a0a; padding: calc(var(--pw) * 0.027); flex: none;
+            box-shadow: 0 0 0 3px #584234, 0 0 60px rgba(234, 144, 74, 0.28), 0 40px 70px -30px rgba(0,0,0,0.8); }
+        .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: calc(var(--pw) * 0.115); }
+        .phone.mid { --pw: 230px; }
 
-        /* Hero */
-        .hero { padding: 40px 0 0; overflow: hidden; }
-        .hero .wrap { display: grid; gap: 28px; justify-items: center; text-align: center; }
-        .hero .copy { display: grid; gap: 24px; justify-items: center; }
-        .hero .lede { margin: 0 auto; }
-        .trust { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, auto); gap: 10px 22px; font-size: 15px; line-height: 20px; font-weight: 600; }
-        .trust li { display: flex; align-items: center; gap: 8px; }
-        .trust svg { width: 18px; height: 18px; stroke: var(--cream); fill: none; stroke-width: 2; flex: none; opacity: 0.9; }
-        .hero .phone { margin-top: 12px; margin-bottom: -180px; }
-        @media (min-width: 900px) {
-            .hero { padding-top: 0; }
-            .hero .wrap { grid-template-columns: 1.15fr 0.85fr; text-align: left; justify-items: start; align-items: center; gap: 48px; min-height: calc(100svh - var(--nav)); }
-            .hero .copy { gap: 28px; justify-items: start; }
-            .hero .lede { margin: 0; }
-            .trust { grid-template-columns: repeat(4, auto); gap: 22px; }
-            .hero .phone { justify-self: center; margin: 48px 0 -120px; }
-        }
+        /* Hero: the why, then the fan of three screens. */
+        .hero { padding: 72px 0 0; text-align: center; }
+        .hero .copy { display: grid; justify-items: center; gap: 0; }
+        .hero h1 { max-width: none; }
+        .hero .lede { margin: 0 auto 28px; }
+        .hero .trust { margin-top: 22px; }
+        .fan { display: flex; justify-content: center; align-items: flex-end; gap: 22px; margin-top: 56px; height: 470px; overflow: hidden; }
+        .fan .phone { --pw: 280px; }
+        .fan .phone:nth-child(1) { transform: translateY(40px) rotate(-6deg); }
+        .fan .phone:nth-child(2) { --pw: 300px; align-self: flex-start; }
+        .fan .phone:nth-child(3) { transform: translateY(40px) rotate(6deg); }
+        @media (max-width: 760px) { .fan { height: 420px; } .fan .phone:nth-child(1), .fan .phone:nth-child(3) { display: none; } .fan .phone:nth-child(2) { --pw: min(300px, 76vw); } }
 
-        /* Make room: three phones in a row; on a phone, a row to swipe. */
-        .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-        .trio figure { margin: 0; display: grid; gap: 22px; justify-items: center; align-content: start; text-align: center; }
-        .trio figcaption { display: grid; gap: 6px; max-width: 30ch; }
-        .trio figcaption p { font-size: 16px; line-height: 24px; }
+        /* How: three beliefs in practice, no phones. */
+        .how { display: grid; gap: 18px; }
+        .how .beat { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 28px; display: grid; gap: 8px; }
+        .how .beat p { font-size: 16px; line-height: 24px; }
+        .how .glyph { width: 46px; height: 46px; border-radius: 13px; background: rgba(234, 144, 74, 0.14); display: grid; place-items: center; margin-bottom: 6px; }
+        .how .glyph svg { width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        @media (min-width: 900px) { .how { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+
+        /* A row of screens; on a phone, a row to swipe with the next peeking. */
+        .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .row figure { margin: 0; display: grid; gap: 26px; justify-items: center; align-content: start; text-align: center; }
+        .row figcaption { display: grid; gap: 6px; max-width: 30ch; }
+        .row figcaption p { font-size: 16px; line-height: 24px; }
         @media (max-width: 899px) {
-            .trio { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78vw; gap: 16px;
-                overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -20px; padding: 0 20px 8px; scrollbar-width: none; }
-            .trio::-webkit-scrollbar { display: none; }
-            .trio figure { scroll-snap-align: center; }
-            .trio .phone { --pw: min(260px, 64vw); }
+            .row { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 70vw; gap: 18px;
+                overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -20px; padding: 6px 20px 24px; scrollbar-width: none; }
+            .row::-webkit-scrollbar { display: none; }
+            .row figure { scroll-snap-align: center; }
+            .row .phone { --pw: min(240px, 62vw); }
         }
         /* Numbers set as type. */
-        .numbers { display: flex; justify-content: center; align-items: baseline; gap: 18px 28px; flex-wrap: wrap; margin: 72px auto 0; text-align: center; max-width: 640px; }
-        .numbers .n { font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.03em; color: var(--accent); font-variant-numeric: tabular-nums; }
+        .numbers { display: flex; justify-content: center; align-items: baseline; gap: 14px 24px; flex-wrap: wrap; margin: 64px auto 0; text-align: center; max-width: 640px; }
+        .numbers .n { font-size: 46px; line-height: 50px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent); font-variant-numeric: tabular-nums; }
         .numbers .n small { font-size: 0.5em; letter-spacing: 0; }
         .numbers .arrow { font-size: 28px; color: var(--cream-quiet); }
         .numbers .label { width: 100%; font-size: 14px; line-height: 20px; color: var(--cream-quiet); }
         @media (min-width: 900px) { .numbers .n { font-size: 72px; line-height: 76px; } }
 
-        /* Relive: the movie large, music and edit beside it. */
-        .relive { display: grid; gap: 40px; align-items: center; justify-items: center; }
-        .relive .side { display: grid; gap: 32px; }
-        .relive .item { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; }
-        .relive .item p { font-size: 16px; line-height: 24px; margin-top: 6px; }
-        .relive .phone.small { --pw: 120px; }
-        @media (min-width: 900px) { .relive { grid-template-columns: auto 1fr; gap: 80px; justify-items: start; } }
-        @media (max-width: 899px) { .relive .side { text-align: center; justify-items: center; } .relive .lede { margin-left: auto; margin-right: auto; }
-            .relive .item { grid-template-columns: 1fr; justify-items: center; } .relive .item .phone { display: none; } }
+        /* Movies: the movie full size, music and edit beside it. */
+        .movie { display: grid; gap: 40px; align-items: center; justify-items: center; }
+        .movie .pair { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
+        .movie .pair figure { margin: 0; display: grid; gap: 18px; justify-items: center; text-align: center; max-width: 240px; }
+        .movie .pair p { font-size: 15px; line-height: 22px; }
+        @media (min-width: 900px) { .movie { grid-template-columns: auto 1fr; gap: 72px; } }
+        @media (max-width: 899px) { .movie .pair .phone { --pw: min(200px, 40vw); } .movie .pair { gap: 16px; flex-wrap: nowrap; } .movie .pair figure { max-width: 44vw; } }
 
-        /* Nothing in the small print */
-        .nots { list-style: none; margin: 0 auto; padding: 0; max-width: 820px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-        .nots li { padding: 12px 20px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); font-weight: 600; font-size: 17px; line-height: 22px; }
-        .private { display: grid; gap: 24px; max-width: 980px; margin: 64px auto 0; }
-        .private .point { display: grid; gap: 4px; }
-        .private .point p { font-size: 16px; line-height: 24px; }
-        .private a { color: var(--cream); }
-        @media (min-width: 900px) { .private { grid-template-columns: repeat(3, 1fr); gap: 40px; } }
-        .maker { max-width: 640px; margin: 72px auto 0; padding: 32px; border-radius: 24px; background: var(--card); border: 1px solid var(--line); display: grid; gap: 16px; }
+        /* Private, and the maker. */
+        .points { display: grid; gap: 18px; max-width: 1000px; margin: 0 auto; }
+        .points .point { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px; display: grid; gap: 6px; }
+        .points .point p { font-size: 16px; line-height: 24px; }
+        .points a { color: var(--cream); }
+        @media (min-width: 900px) { .points { grid-template-columns: repeat(3, 1fr); } }
+        .maker { max-width: 640px; margin: 48px auto 0; padding: 32px; border-radius: 24px; background: rgba(28, 17, 11, 0.72); border: 1px solid var(--line); display: grid; gap: 16px; }
         .maker p { font-size: 18px; line-height: 28px; color: var(--cream); }
         .maker .sign { display: flex; align-items: center; gap: 12px; font-size: 15px; line-height: 20px; color: var(--cream-quiet); }
         .maker .sign img { width: 40px; height: 40px; border-radius: 10px; }
-
-        /* Find and keep: one row, two cards. */
-        .pair { display: grid; gap: 24px; }
-        .pair .card { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; padding: 28px 28px 0; border-radius: 28px; background: var(--card); border: 1px solid var(--line); overflow: hidden; }
-        .pair .card > div:last-child { padding-bottom: 28px; }
-        .pair .card p { font-size: 16px; line-height: 24px; margin-top: 8px; }
-        .pair .phone { --pw: 130px; margin-bottom: -60px; align-self: end; }
-        @media (min-width: 900px) { .pair { grid-template-columns: 1fr 1fr; } .pair .phone { --pw: 180px; margin-bottom: -110px; } }
-        /* On a phone: words first, the phone peeking up under them. */
-        @media (max-width: 599px) { .pair .card { grid-template-columns: 1fr; justify-items: center; text-align: center; height: 380px; align-content: start; }
-            .pair .card > div:last-child { order: -1; padding-bottom: 0; } .pair .phone { --pw: 200px; margin-bottom: 0; } }
 
         /* iPhone Duo: a closed Duo opens as you scroll, like a book: the
            front half swings open to the left on the hinge in the middle;
            its back is the outer screen. Without script, or with reduced
            motion, it is simply open. */
-        .duo { background: var(--night); border-top: 1px solid var(--line); }
-        .duo-stage.scrolls { height: 140svh; }
-        .duo-sticky { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 96px 20px; }
+        .duo { padding-top: 0; margin-top: 104px; background: rgba(8, 5, 4, 0.72); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .duo-stage.scrolls { height: 150svh; }
+        .duo-sticky { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; padding: 96px 20px; }
         .duo-stage.scrolls .duo-sticky { position: sticky; top: var(--nav); height: calc(100svh - var(--nav)); padding: 0 20px; }
-        .duo-copy { text-align: center; max-width: 640px; display: grid; gap: 16px; justify-items: center; }
+        .duo-copy { text-align: center; max-width: 640px; display: grid; justify-items: center; }
+        .duo-copy h2 { margin-top: 8px; }
+        .duo-copy p { margin-top: 14px; }
         .duo-device {
             --open: 1;
-            --w: min(860px, 90vw, calc((100svh - 400px) * 1.42));
+            --w: min(860px, 90vw, calc((100svh - 420px) * 1.42));
             width: var(--w); aspect-ratio: 2853 / 2007; position: relative; perspective: 2600px;
             /* Closed, the phone is the right half: centre it. */
             transform: translateX(calc((1 - var(--open)) * var(--w) / -4));
         }
-        .duo-right, .duo-face { position: absolute; top: 0; bottom: 0; width: 50%; background-color: #050505; background-repeat: no-repeat; border: 7px solid #050505; }
+        .duo-right, .duo-face { position: absolute; top: 0; bottom: 0; width: 50%; background-color: #0a0a0a; background-repeat: no-repeat; border: 7px solid #0a0a0a; }
         .duo-right { left: 50%; border-left: 0; border-radius: 0 30px 30px 0; background-image: url("assets/screens/duo-inner.jpg"); background-size: 200% 100%; background-position: right center;
-            box-shadow: 0 0 80px rgba(234, 144, 74, 0.20), 0 40px 70px -30px rgba(0, 0, 0, 0.8); }
+            box-shadow: 0 0 0 3px #584234, 0 0 60px rgba(234, 144, 74, 0.24), 0 40px 70px -30px rgba(0,0,0,0.8); }
         .duo-cover { position: absolute; top: 0; bottom: 0; left: 0; width: 50%; transform-origin: right center; transform-style: preserve-3d;
             transform: rotateY(calc((1 - var(--open)) * 180deg)); }
         .duo-face { left: 0; width: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden;
-            box-shadow: 0 0 80px rgba(234, 144, 74, 0.20), 0 40px 70px -30px rgba(0, 0, 0, 0.8); }
+            box-shadow: 0 0 0 3px #584234, 0 0 60px rgba(234, 144, 74, 0.24), 0 40px 70px -30px rgba(0,0,0,0.8); }
         .duo-face.inner { border-right: 0; border-radius: 30px 0 0 30px; background-image: url("assets/screens/duo-inner.jpg"); background-size: 200% 100%; background-position: left center; }
         .duo-face.outer { transform: rotateY(180deg); border-radius: 30px; background-image: url("assets/screens/duo-outer.jpg"); background-size: cover; background-position: center top; }
         .duo-device::after { content: ""; position: absolute; top: 7px; bottom: 7px; left: calc(50% - 1px); width: 2px; pointer-events: none;
@@ -219,37 +216,38 @@
         /* Questions */
         .faq .list { max-width: 760px; margin: 0 auto; }
         details { border-bottom: 1px solid var(--line); }
-        summary { list-style: none; cursor: pointer; padding: 22px 36px 22px 0; position: relative; font-weight: 600; font-size: 18px; line-height: 26px; }
+        summary { list-style: none; cursor: pointer; padding: 20px 36px 20px 0; position: relative; font-weight: 600; font-size: 18px; line-height: 26px; }
         summary::-webkit-details-marker { display: none; }
-        summary::after { content: "+"; position: absolute; right: 4px; top: 20px; font-size: 24px; color: var(--cream-quiet); transition: transform 0.2s ease; }
+        summary::after { content: "+"; position: absolute; right: 4px; top: 18px; font-size: 24px; color: var(--accent); transition: transform 0.2s ease; }
         details[open] summary::after { transform: rotate(45deg); }
-        details p { padding: 0 0 22px; font-size: 16px; line-height: 25px; }
+        details p { padding: 0 0 20px; font-size: 16px; line-height: 25px; }
 
         /* Get it */
-        .get { text-align: center; }
-        .get .wrap { display: grid; gap: 24px; justify-items: center; }
-        .get .install { justify-content: center; }
-        .get .mail { font-size: 15px; color: var(--cream-quiet); }
-        footer { border-top: 1px solid var(--line); padding: 28px 0 40px; font-size: 13px; line-height: 18px; color: var(--cream-quiet); background: var(--espresso); }
+        .get { padding-bottom: 104px; text-align: center; }
+        .get .wrap { display: grid; justify-items: center; }
+        .get .mail { margin-top: 22px; font-size: 15px; color: var(--cream-quiet); }
+        footer { border-top: 1px solid var(--line); padding: 26px 0 40px; font-size: 13px; line-height: 18px; color: var(--cream-quiet); }
         footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
         footer nav { display: flex; gap: 18px; }
         footer a { text-decoration: none; }
         footer a:hover { color: var(--cream); }
 
-        /* Reveal: a small rise, never above the fold, nothing for reduced motion. */
-        .reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.4s ease, transform 0.4s ease; }
+        /* Reveal: a small rise as sections arrive; nothing for reduced motion. */
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
         .reveal.in { opacity: 1; transform: none; }
         @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
         :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
     </style>
 </head>
 <body>
+<div class="paper">
     <header class="nav">
         <div class="wrap">
-            <a class="brand" href="#top"><img src="assets/brownbearai-logo.png" alt="" width="30" height="30">BrownBearAI</a>
+            <a class="brand" href="#top"><img src="assets/brownbearai-logo.png" alt="" width="32" height="32">BrownBearAI</a>
             <nav class="nav-links" aria-label="Sections">
                 <a class="wide" href="#room">Make room</a>
                 <a class="wide" href="#movies">Movies</a>
+                <a class="wide" href="#duo">iPhone Duo</a>
                 <a class="wide" href="#privacy">Privacy</a>
                 <a class="wide" href="#faq">Questions</a>
                 <a class="get-small" href="https://apps.apple.com/app/id6796580170?ct=site-nav&amp;mt=8">Get the app</a>
@@ -258,11 +256,13 @@
     </header>
 
     <main id="top">
-        <section class="hero doodled">
+        <!-- Why -->
+        <section class="hero">
             <div class="wrap">
-                <div class="copy">
-                    <h1>Get your space back. Keep the memories.</h1>
-                    <p class="lede">BrownBearAI finds the duplicates, blurry shots and big videos filling your iPhone, keeps the best of each, and you choose what goes.</p>
+                <div class="copy quiet">
+                    <h1>Every photo<br>is a memory.</h1>
+                    <div class="bar"></div>
+                    <p class="lede">Thousands of them sit in your phone, buried and rarely seen. BrownBearAI gives your memories the attention they deserve.</p>
                     <div class="install">
                         <a class="badge" href="https://apps.apple.com/app/id6796580170?ct=site-hero&amp;mt=8" aria-label="Download on the App Store">
                             <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
@@ -280,100 +280,130 @@
                         <li><svg viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></svg>Stays on your iPhone</li>
                     </ul>
                 </div>
-                <div class="phone hero-size"><img src="assets/screens/03-cleanup.jpg" width="640" height="1391" alt="Clean Up: the space you can free, by duplicates, similar shots and big videos"></div>
+                <div class="fan" aria-hidden="true">
+                    <div class="phone"><img src="assets/screens/03-cleanup.jpg" width="640" height="1391" alt=""></div>
+                    <div class="phone"><img src="assets/screens/09-movie.jpg" width="640" height="1391" alt=""></div>
+                    <div class="phone"><img src="assets/screens/04-similar.jpg" width="640" height="1391" alt=""></div>
+                </div>
             </div>
         </section>
 
-        <section class="band" id="room">
+        <!-- How -->
+        <section id="how">
             <div class="wrap">
-                <div class="band-head reveal">
-                    <h2>Make room, keep the best.</h2>
-                    <p class="lede">One scan sorts the clutter into piles and says how much space each would free. You look, you decide, and every delete still goes through Photos.</p>
+                <div class="head quiet reveal">
+                    <div class="kicker">How</div>
+                    <h2>We look after them, the way they deserve.</h2>
+                    <div class="bar"></div>
                 </div>
-                <div class="trio">
-                    <figure>
-                        <div class="phone"><img src="assets/screens/04-similar.jpg" width="640" height="1391" loading="lazy" alt="Similar shots: the sharpest is marked to keep"></div>
+                <div class="how">
+                    <div class="beat reveal">
+                        <div class="glyph"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div>
+                        <h3>Keep the best of every moment</h3>
+                        <p>The sharpest of ten near-identical shots is kept. Duplicates, blurry photos and big videos stop burying the ones that matter.</p>
+                    </div>
+                    <div class="beat reveal">
+                        <div class="glyph"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></div>
+                        <h3>Bring them back to life</h3>
+                        <p>An album becomes a movie set to music, so memories are watched and shared, not just stored.</p>
+                    </div>
+                    <div class="beat reveal">
+                        <div class="glyph"><svg viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></div>
+                        <h3>Only you see them</h3>
+                        <p>Everything happens on your iPhone. No account, no server, no ads, and it's free.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What: Make room -->
+        <section id="room">
+            <div class="wrap">
+                <div class="head quiet reveal">
+                    <div class="kicker">Make room</div>
+                    <h2>So the best ones aren't lost among the rest.</h2>
+                    <div class="bar"></div>
+                    <p class="lede">One scan sorts what buries your memories into piles and says how much space each would free. You look, you decide, and every delete goes through Photos.</p>
+                </div>
+                <div class="row">
+                    <figure class="reveal">
+                        <div class="phone mid"><img src="assets/screens/04-similar.jpg" width="640" height="1391" loading="lazy" alt="Similar shots: the sharpest is marked to keep"></div>
                         <figcaption><h3>Keeps your best shot</h3><p>Ten photos of the same sunset? The sharpest is marked to keep. Change your mind, then clear the rest.</p></figcaption>
                     </figure>
-                    <figure>
-                        <div class="phone"><img src="assets/screens/05-swipe.jpg" width="640" height="1391" loading="lazy" alt="Swipe: keep or delete one photo at a time"></div>
+                    <figure class="reveal">
+                        <div class="phone mid"><img src="assets/screens/05-swipe.jpg" width="640" height="1391" loading="lazy" alt="Swipe: keep or delete one photo at a time"></div>
                         <figcaption><h3>Swipe to keep or let go</h3><p>Right to keep, left to let go. Stop any time and pick up where you left off.</p></figcaption>
                     </figure>
-                    <figure>
-                        <div class="phone"><img src="assets/screens/09-compress.jpg" width="640" height="1391" loading="lazy" alt="Compress: large videos, largest first"></div>
+                    <figure class="reveal">
+                        <div class="phone mid"><img src="assets/screens/09-compress.jpg" width="640" height="1391" loading="lazy" alt="Compress: large videos, largest first"></div>
                         <figcaption><h3>Big videos, a fraction of the space</h3><p>A 1080p copy that looks sharp on your phone. Date, place, albums and Favorite come with it.</p></figcaption>
                     </figure>
                 </div>
-                <div class="numbers reveal" aria-label="A minute of 4K video takes about 400 MB; after Compress, often about 80 MB">
+                <div class="numbers quiet reveal" aria-label="A minute of 4K video takes about 400 MB; after Compress, often about 80 MB">
                     <span class="n">400<small> MB</small></span><span class="arrow">→</span><span class="n">80<small> MB</small></span>
                     <span class="label">A minute of 4K video, before and after Compress. Often about a fifth of the size; your original stays until you say so.</span>
                 </div>
             </div>
         </section>
 
-        <section class="band roast" id="movies">
+        <!-- What: Movies -->
+        <section id="movies">
             <div class="wrap">
-                <div class="relive">
-                    <div class="phone hero-size reveal"><img src="assets/screens/09-movie.jpg" width="640" height="1391" loading="lazy" alt="A movie made from an album, playing"></div>
-                    <div class="side">
-                        <div class="reveal">
-                            <h2>Turn an album into a movie.</h2>
-                            <p class="lede" style="margin-top:16px">Pick an album and BrownBearAI makes a movie of its best photos: no duplicates or blurry shots, gentle motion on every photo.</p>
-                        </div>
-                        <div class="item reveal">
-                            <div class="phone small"><img src="assets/screens/11-music.jpg" width="640" height="1391" loading="lazy" alt="Choosing music for a movie"></div>
-                            <div><h3>Set to music</h3><p>Ten soundtracks come with the app, from happy to epic, or use a song you bought in iTunes.</p></div>
-                        </div>
-                        <div class="item reveal">
-                            <div class="phone small"><img src="assets/screens/10-movie-edit.jpg" width="640" height="1391" loading="lazy" alt="Editing a movie photo by photo"></div>
-                            <div><h3>Make it yours</h3><p>Reorder photos, cut the ones you don't want, choose how each one moves.</p></div>
-                        </div>
+                <div class="head quiet reveal">
+                    <div class="kicker">Relive</div>
+                    <h2>Memories are for watching.</h2>
+                    <div class="bar"></div>
+                    <p class="lede">Pick an album and BrownBearAI makes a movie of its best photos: no duplicates or blurry shots, gentle motion on every photo.</p>
+                </div>
+                <div class="movie">
+                    <div class="phone reveal"><img src="assets/screens/09-movie.jpg" width="640" height="1391" loading="lazy" alt="A movie made from an album, playing"></div>
+                    <div class="pair">
+                        <figure class="reveal">
+                            <div class="phone mid"><img src="assets/screens/11-music.jpg" width="640" height="1391" loading="lazy" alt="Choosing music for a movie"></div>
+                            <figcaption><h3>Set to music</h3><p>Ten soundtracks come with the app, or use a song you bought in iTunes.</p></figcaption>
+                        </figure>
+                        <figure class="reveal">
+                            <div class="phone mid"><img src="assets/screens/10-movie-edit.jpg" width="640" height="1391" loading="lazy" alt="Editing a movie photo by photo"></div>
+                            <figcaption><h3>Make it yours</h3><p>Reorder photos, cut the ones you don't want, choose how each one moves.</p></figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="band bean" id="privacy">
+        <!-- What: Find and keep -->
+        <section id="find">
             <div class="wrap">
-                <div class="band-head reveal">
-                    <h2>Free, with nothing in the small print.</h2>
+                <div class="head quiet reveal">
+                    <div class="kicker">Find and keep</div>
+                    <h2>Every moment, where you can find it.</h2>
+                    <div class="bar"></div>
                 </div>
-                <ul class="nots reveal">
-                    <li>No subscription</li><li>No ads</li><li>No account</li><li>No upload</li><li>No pop-ups saying your storage is full</li>
-                </ul>
-                <div class="private reveal">
-                    <div class="point"><h3>Your photos stay yours</h3><p>Photos, faces and search are analysed on your iPhone. There is no BrownBearAI server.</p></div>
-                    <div class="point"><h3>Nothing leaves unless you send it</h3><p>Only photos you choose to back up go anywhere, to your own Dropbox.</p></div>
-                    <div class="point"><h3>Deletes you can undo</h3><p>Everything goes through Photos and waits in Recently Deleted for 30 days. <a href="privacy-policy.html">Read the privacy policy</a></p></div>
-                </div>
-                <div class="maker reveal">
-                    <p>BrownBearAI is made by one person. It's free because a photo app should look after your memories, not sell you a subscription to clean them. Every message is read.</p>
-                    <div class="sign"><img src="assets/brownbearai-logo.png" alt="" width="40" height="40"><span>Divyanshu Goyal<br>Maker of BrownBearAI</span></div>
+                <div class="row">
+                    <figure class="reveal">
+                        <div class="phone mid"><img src="assets/screens/02-search.jpg" width="640" height="1391" loading="lazy" alt="Search by what's in a photo"></div>
+                        <figcaption><h3>Find any moment</h3><p>"Beach", "dog", the words on a receipt, the people you've named.</p></figcaption>
+                    </figure>
+                    <figure class="reveal">
+                        <div class="phone mid"><img src="assets/screens/06-editor.jpg" width="640" height="1391" loading="lazy" alt="The photo editor"></div>
+                        <figcaption><h3>Touch up any photo</h3><p>Light, color, filters, crop and background blur. Every edit can be undone.</p></figcaption>
+                    </figure>
+                    <figure class="reveal">
+                        <div class="phone mid"><img src="assets/screens/08-dropbox.jpg" width="640" height="1391" loading="lazy" alt="An album backed up to Dropbox"></div>
+                        <figcaption><h3>A copy in your Dropbox</h3><p>Every file checked before anything leaves. Bring it back whenever you want.</p></figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
 
-        <section class="band" id="find">
-            <div class="wrap">
-                <div class="pair">
-                    <div class="card reveal">
-                        <div class="phone"><img src="assets/screens/02-search.jpg" width="640" height="1391" loading="lazy" alt="Search by what's in a photo"></div>
-                        <div><h3>Find any moment</h3><p>"Beach", "dog", the words on a receipt, the people you've named. Found on your phone.</p></div>
-                    </div>
-                    <div class="card reveal">
-                        <div class="phone"><img src="assets/screens/08-dropbox.jpg" width="640" height="1391" loading="lazy" alt="An album backed up to Dropbox"></div>
-                        <div><h3>Keep a copy in your Dropbox</h3><p>Every file checked before anything leaves. Bring it back whenever you want.</p></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- What: Duo -->
         <section class="duo" id="duo">
             <div class="duo-stage">
                 <div class="duo-sticky">
                     <div class="duo-copy">
+                        <div class="kicker">iPhone Duo</div>
                         <h2>Unfold your memories.</h2>
-                        <p class="lede">On iPhone Duo, open it and BrownBearAI opens with you. Fold it mid-task and you're right where you were.</p>
+                        <p class="lede">Open it and BrownBearAI opens with you: more of your photos at a glance, the best shot side by side, and Keep or Delete beside the photo, never on the fold.</p>
                     </div>
                     <div class="duo-device" role="img" aria-label="iPhone Duo opening from Clean Up on the outer screen to the photo library across the inner screen">
                         <div class="duo-right"></div>
@@ -386,9 +416,29 @@
             </div>
         </section>
 
-        <section class="band bean faq" id="faq">
+        <!-- Privacy, and who makes it -->
+        <section id="privacy">
             <div class="wrap">
-                <div class="band-head reveal"><h2>Questions</h2></div>
+                <div class="head quiet reveal">
+                    <div class="kicker">Private by design</div>
+                    <h2>Your memories, seen only by you.</h2>
+                    <div class="bar"></div>
+                </div>
+                <div class="points reveal">
+                    <div class="point"><h3>No BrownBearAI server</h3><p>Photos, faces and search are analyzed on your iPhone. There is no account to make.</p></div>
+                    <div class="point"><h3>Nothing leaves unless you send it</h3><p>Only photos you choose to back up go anywhere, to your own Dropbox.</p></div>
+                    <div class="point"><h3>Deletes you can undo</h3><p>Every delete goes through Photos and waits in Recently Deleted for 30 days. <a href="privacy-policy.html">Read the privacy policy</a></p></div>
+                </div>
+                <div class="maker reveal">
+                    <p>BrownBearAI is made by one person. It's free because a photo app should look after your memories, not sell you a subscription to clean them. Every message is read.</p>
+                    <div class="sign"><img src="assets/brownbearai-logo.png" alt="" width="40" height="40"><span>Divyanshu Goyal<br>Maker of BrownBearAI</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <div class="wrap">
+                <div class="head quiet reveal"><h2>Questions</h2><div class="bar"></div></div>
                 <div class="list reveal">
                     <details>
                         <summary>Why is it free?</summary>
@@ -422,10 +472,10 @@
             </div>
         </section>
 
-        <section class="band get doodled" id="get">
-            <div class="wrap reveal">
-                <h2>Get BrownBearAI.</h2>
-                <p class="lede">Free on the App Store, for iPhone, iPhone Duo and iPad.</p>
+        <section class="get" id="get">
+            <div class="wrap quiet reveal">
+                <h2>Give your memories<br>the attention they deserve.</h2>
+                <div class="bar"></div>
                 <div class="install">
                     <a class="badge" href="https://apps.apple.com/app/id6796580170?ct=site-end&amp;mt=8" aria-label="Download on the App Store">
                         <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
@@ -436,7 +486,7 @@
                         <span>On a Mac?<br>Scan with your<br>iPhone camera.</span>
                     </div>
                 </div>
-                <p class="mail">Questions or ideas? <a href="mailto:divyanshugoyal.g25@gmail.com?subject=BrownBearAI">Email me</a>. Every message is read.</p>
+                <p class="mail">Free for iPhone, iPhone Duo and iPad. Questions or ideas? <a href="mailto:divyanshugoyal.g25@gmail.com?subject=BrownBearAI">Email me</a>, every message is read.</p>
             </div>
         </section>
     </main>
@@ -451,6 +501,7 @@
             </nav>
         </div>
     </footer>
+</div>
 
     <script>
         const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
