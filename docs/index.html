@@ -171,7 +171,7 @@
         .movie .pair { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
         .movie .pair figure { margin: 0; display: grid; gap: 18px; justify-items: center; text-align: center; max-width: 240px; }
         .movie .pair p { font-size: 15px; line-height: 22px; }
-        @media (min-width: 900px) { .movie { grid-template-columns: auto 1fr; gap: 72px; } }
+        @media (min-width: 900px) { .movie { grid-template-columns: auto auto; justify-content: center; gap: 72px; } }
         @media (max-width: 899px) { .movie .pair .phone { --pw: min(200px, 40vw); } .movie .pair { gap: 16px; flex-wrap: nowrap; } .movie .pair figure { max-width: 44vw; } }
 
         /* Private by design. */
