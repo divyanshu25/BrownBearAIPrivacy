@@ -166,13 +166,11 @@
         .numbers .label { width: 100%; font-size: 14px; line-height: 20px; color: var(--cream-quiet); }
         @media (min-width: 900px) { .numbers .n { font-size: 72px; line-height: 76px; } }
 
-        /* Movies: the movie full size, music and edit beside it. */
-        .movie { display: grid; gap: 40px; align-items: center; justify-items: center; }
-        .movie .pair { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
-        .movie .pair figure { margin: 0; display: grid; gap: 18px; justify-items: center; text-align: center; max-width: 240px; }
-        .movie .pair p { font-size: 15px; line-height: 22px; }
-        @media (min-width: 900px) { .movie { grid-template-columns: auto auto; justify-content: center; gap: 72px; } }
-        @media (max-width: 899px) { .movie .pair .phone { --pw: min(200px, 40vw); } .movie .pair { gap: 16px; flex-wrap: nowrap; } .movie .pair figure { max-width: 44vw; } }
+        /* Movies: watch, music, edit, three phones the same size in one row. */
+        .movie { display: grid; grid-template-columns: repeat(3, auto); justify-content: center; align-items: start; gap: 56px; }
+        .movie figure { margin: 0; display: grid; gap: 18px; justify-items: center; text-align: center; max-width: 240px; }
+        .movie p { font-size: 15px; line-height: 22px; }
+        @media (max-width: 899px) { .movie { grid-template-columns: repeat(2, auto); gap: 40px 16px; } .movie figure:first-child { grid-column: 1 / -1; justify-self: center; max-width: 320px; } .movie .phone { --pw: min(200px, 40vw); } .movie figure { max-width: 44vw; } }
 
         /* Private by design. */
         .points { display: grid; gap: 18px; max-width: 1000px; margin: 0 auto; }
@@ -355,17 +353,18 @@
                     <p class="lede">Pick an album and BrownBearAI makes a movie of its best photos: no duplicates or blurry shots, gentle motion on every photo.</p>
                 </div>
                 <div class="movie">
-                    <div class="phone reveal"><img src="assets/screens/09-movie.jpg" width="640" height="1391" loading="lazy" alt="A movie made from an album, playing"></div>
-                    <div class="pair">
-                        <figure class="reveal">
-                            <div class="phone mid"><img src="assets/screens/11-music.jpg" width="640" height="1391" loading="lazy" alt="Choosing music for a movie"></div>
-                            <figcaption><h3>Set to music</h3><p>Ten soundtracks come with the app, or use a song you bought in iTunes.</p></figcaption>
-                        </figure>
-                        <figure class="reveal">
-                            <div class="phone mid"><img src="assets/screens/10-movie-edit.jpg" width="640" height="1391" loading="lazy" alt="Editing a movie photo by photo"></div>
-                            <figcaption><h3>Make it yours</h3><p>Reorder photos, cut the ones you don't want, choose how each one moves.</p></figcaption>
-                        </figure>
-                    </div>
+                    <figure class="reveal">
+                        <div class="phone mid"><img src="assets/screens/09-movie.jpg" width="640" height="1391" loading="lazy" alt="A movie made from an album, playing"></div>
+                        <figcaption><h3>Ready to watch</h3><p>Play it, save it to Photos or share it straight from the app.</p></figcaption>
+                    </figure>
+                    <figure class="reveal">
+                        <div class="phone mid"><img src="assets/screens/11-music.jpg" width="640" height="1391" loading="lazy" alt="Choosing music for a movie"></div>
+                        <figcaption><h3>Set to music</h3><p>Ten soundtracks come with the app, or use a song you bought in iTunes.</p></figcaption>
+                    </figure>
+                    <figure class="reveal">
+                        <div class="phone mid"><img src="assets/screens/10-movie-edit.jpg" width="640" height="1391" loading="lazy" alt="Editing a movie photo by photo"></div>
+                        <figcaption><h3>Make it yours</h3><p>Reorder photos, cut the ones you don't want, choose how each one moves.</p></figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
